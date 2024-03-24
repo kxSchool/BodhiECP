@@ -1,0 +1,779 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    line-height: 1;
+    -webkit-text-size-adjust: 100%;
+    background-color: #f3f6f6;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption,
+th,
+td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+q,
+blockquote {
+    quotes: none;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+    content: "";
+    content: none;
+}
+
+a img {
+    border: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+a,
+a:hover,
+a:hover,
+a:visited {
+    text-decoration: none;
+}
+
+img,
+a,
+a:hover,
+a:active {
+    border: none;
+    outline: none;
+}
+
+button:visited {
+    border: none;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+body {
+    font-family: 'PingFangSC', 'STHeiti', 'Microsoft YaHei', 'Helvetica', 'Arial', sans-serif;
+    -webkit-overflow-scrolling: touch;
+}
+
+html {
+    position: relative;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media all and (min-width: 400px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+@media all and (min-width: 600px) {
+    html {
+        font-size: 32px;
+    }
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #b6b5b5;
+
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #b6b5b5;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #b6b5b5;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #b6b5b5;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+.layout {
+    flex: 1;
+}
+
+footer {
+    flex: 0;
+}
+
+input {
+    outline: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+input[type="text"],
+input[type="password"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.4rem;
+    height: 0.8rem;
+    color: red;
+    border-bottom: 0.01rem solid #d9d9d9;
+    background-color: #ffffff;
+    overflow: hidden;
+    z-index: 100;
+}
+
+header a {
+    display: inline-block;
+    font-size: 0.16rem;
+}
+
+header a .area {
+    line-height: 0.26667rem;
+}
+
+header a .area span {
+    font-size: 14px;
+    vertical-align: middle;
+    color: #333333;
+}
+
+[data-dpr="2"] header a .area span {
+    font-size: 28px;
+}
+
+[data-dpr="3"] header a .area span {
+    font-size: 42px;
+}
+
+header a .logo {
+    display: inline-block; 
+    vertical-align: middle;
+    width: 1.4rem;
+    height: 0.6rem;
+    background: url(../../images/common/home_top_icon.png) no-repeat;
+    background-size: contain;
+}
+header a .home {
+    display: inline-block;
+    margin-left: -0.13333rem;
+    vertical-align: middle;
+    width: 0.46rem;
+    height: 0.4rem;
+    background: url(../../images/common/home-top-left.png) no-repeat;
+    background-size: contain;
+}
+
+header a .person {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.36rem;
+    height: 0.4rem;
+    background: url(../../images/common/home-top-right.png) no-repeat;
+    background-size: contain;
+}
+
+header a .title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.4rem;
+    color: #333333;
+    max-width: 7.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*咨询悬浮框 S*/
+.m-customer {
+    position: fixed;
+    z-index: 50;
+    bottom: 1.6rem;
+    right: 0;
+    text-align: center;
+    margin-right: 0.1rem;
+   
+}
+.m-customer a:nth-of-type(1){
+    height: 0.93rem;
+    width: 0.76rem;
+    line-height: 0.93rem;
+    display: block;
+    background: #f95b53;
+    padding-top:0.17rem;
+    -moz-border-top-left-radius: 0.1rem;
+    -webkit-border-top-left-radius: 0.1rem;
+    border-top-left-radius: 0.1rem;
+    -moz-border-top-right-radius: 0.1rem;
+    -webkit-border-top-right-radius: 0.1rem;
+    border-top-right-radius: 0.1rem;
+}
+.m-customer a:nth-of-type(2){
+    height: 0.93rem;
+    width: 0.76rem;
+    display: block;
+    background: #f95b53;
+    padding-top: 0.17rem;
+    -moz-border-bottom-left-radius: 0.1rem;
+    -webkit-border-bottom-left-radius: 0.1rem;
+    border-bottom-left-radius: 0.1rem;
+    -moz-border-bottom-right-radius: 0.1rem;
+    -webkit-border-bottom-right-radius: 0.1rem;
+    border-bottom-right-radius: 0.1rem;
+}
+.m-customer a .customer-icon-1 {
+    width: 0.44rem;
+    height: 0.52rem;
+    background-image: url("../../images/common/home_phone.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.m-customer a .customer-icon-2 {
+    width: 0.48rem;
+    height: 0.48rem;
+    background-image: url("../../images/common/home_online.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+}
+
+.m-customer a .customer-txt {
+    color: #f3f6f6;
+    font-size: 0.26667rem;
+    margin-top: 0.16rem;
+}
+/*咨询悬浮框 E*/
+ 
+
+  
+.layout .mycenter-module  hr{
+    margin: 0;
+    padding: 0; 
+    /* height: 0.01rem; */
+    background-color:#eee;
+    border:0.01rem solid #eee;
+}
+ 
+.layout .mycenter-module .mycenter-module-li .arrow {
+    background: url("../../images/right_arrow.png") no-repeat 0.9rem;
+     background-size: 0.22rem 0.28rem;
+    width: 1.16rem;
+    display: inline-block;
+    
+    color: #b6b5b5;
+    font-size: 0.28rem;
+}
+ 
+
+.weui-loading-wrap {
+    display: block;
+    opacity: 1;
+}
+
+.weui-loading-wrap .weui-mask_transparent {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+ 
+@-webkit-keyframes weuiLoading {
+    0% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+
+@keyframes weuiLoading {
+    0% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+ 
+.layout {
+    
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 0rem 1rem 0rem;
+    background-color: #f7f7f7;
+}
+
+.layout .mycenter-head {
+    width: 100%; 
+    height: 3.12rem;
+    text-align: center; 
+    padding-top: 0.9rem; 
+}
+
+.layout .mycenter-head .headerImg{
+    width: 1.18rem;
+    height: 1.18rem;
+    margin:0.37rem auto 0 auto;
+    overflow: hidden;
+    background-size: cover;
+    position: relative;
+}
+.layout .mycenter-head .headerImg img{
+    width: 100%;
+    height: 100%;
+}
+.layout .mycenter-head .tip p{
+    font-size: 0.28rem;
+    color: #565656;
+    padding-top: 0.16rem;
+}
+
+.layout .mycenter-module {
+    background-color: #ffffff;
+    margin-top: 0.18rem; 
+}
+
+.layout .mycenter-module .mycenter-module-li {
+    margin-left: 0.2 rem;
+    font-size: 0.28rem;
+    padding-left: 0.24rem; 
+}
+ 
+
+.layout .mycenter-module .mycenter-module-li a {
+    display: inline-block;
+    line-height: 0.88rem; 
+}
+ 
+.layout .mycenter-module .mycenter-module-li .word {
+    
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.28rem;
+    color: #565656; 
+}
+.layout .mycenter-module .mycenter-module-li .name {
+    width: 5.6rem;
+    background: url(../../images/right_arrow.png) no-repeat 5.2rem;
+    background-size: 0.2rem;
+}
+.layout .mycenter-module .mycenter-module-li .name input{
+     border: none;
+    width: 5rem;
+    text-align: right;
+    font-size: 0.28rem;
+}
+/*选择性别*/
+.layout .mycenter-module .mycenter-module-li .sex{
+    width: 6.1rem; 
+    background: url(../../images/right_arrow.png) no-repeat 5.7rem;
+    background-size: 0.2rem;
+  }
+  .layout .mycenter-module .mycenter-module-li .sex select{
+    border: none;
+    width: 5.6rem;
+    height: 0.8rem;
+    text-align: right;
+    opacity: 0;
+  }
+.sexli{
+    position: relative;
+}
+.sexli label{
+    position: absolute;
+    top:0.3rem;
+    left: 6rem;
+    color: #b6b5b5;
+}
+.dateli{
+    position: relative;
+}
+.dateli label{
+    position: absolute;
+    top:0.3rem;
+    right: 0.6rem;
+    color: #b6b5b5;
+}
+  .layout .mycenter-module .mycenter-module-li .sex .label{
+    position: absolute;
+    font-size: 0.28rem;
+    color: #b6b5b5;
+    text-align: right;
+    padding-left: 4.7rem;
+  }
+  /*选择生日*/
+  .layout .mycenter-module .mycenter-module-li .birthday label{
+    position: absolute;
+    font-size: 0.28rem;
+    color: #b6b5b5;
+    text-align: right;
+    padding-left: 4.7rem;
+    z-index: -1;
+  }
+  .layout .mycenter-module .mycenter-module-li .birthday{
+    width: 6.1rem; 
+    background: url(../../images/right_arrow.png) no-repeat 5.7rem;
+    background-size: 0.2rem;
+  }
+  .layout .mycenter-module .mycenter-module-li .birthday input{
+    /* border: none; */
+    width: 5.6rem;
+    text-align: right;
+    font-size: 0.28rem;
+    opacity: 0;
+    z-index: 9999;
+  }
+  /*手机号码修改*/
+  .layout .mycenter-module .mycenter-module-li .phone {
+    width: 5.1rem;
+    background: url(../../images/right_arrow.png) no-repeat 4.7rem;
+    background-size: 0.2rem;
+}
+.layout .mycenter-module .mycenter-module-li .phone input{
+    border: none;
+    width: 4.66rem;
+    text-align: right;
+    font-size: 0.28rem;
+}
+ /*登录密码修改*/
+ .layout .mycenter-module .mycenter-module-li .password {
+    width: 5.1rem;
+    background: url(../../images/right_arrow.png) no-repeat 4.66rem;
+    background-size: 0.2rem;
+     
+}
+.layout .mycenter-module .mycenter-module-li .password input{
+     border: none;
+    width: 4.6rem;
+    text-align: right;
+    font-size: 0.28rem;
+  
+}
+/*邮箱*/
+.layout .mycenter-module .mycenter-module-li .email {
+    width: 6.2rem;
+    background: url(../../images/right_arrow.png) no-repeat 5.78rem;
+    background-size: 0.2rem;
+   
+}
+.layout .mycenter-module .mycenter-module-li .email input{
+     border: none;
+    width: 5.7rem;
+    text-align: right;
+    font-size: 0.28rem;
+    
+}
+/*所属公司*/
+.layout .mycenter-module .mycenter-module-li .company {
+    width: 5.5rem;
+    background: url(../../images/right_arrow.png) no-repeat 5.1rem;
+    background-size: 0.2rem; 
+}
+.layout .mycenter-module .mycenter-module-li .company input{
+     border: none;
+    width: 5rem;
+    text-align: right;
+    font-size: 0.28rem;
+   
+}
+/*职务*/
+.layout .mycenter-module .mycenter-module-li .post {
+    width: 6.2rem;
+    background: url(../../images/right_arrow.png) no-repeat 5.88rem;
+    background-size: 0.2rem;
+   
+}
+.layout .mycenter-module .mycenter-module-li .post input{
+     border: none;
+    width: 5.8rem;
+    text-align: right;
+    font-size: 0.28rem;
+    
+}
+/*公司所在地*/
+.layout .mycenter-module .mycenter-module-li .companyAddress {
+    width: 5.4rem;
+    background: url(../../images/right_arrow.png) no-repeat 5rem;
+    background-size: 0.2rem; ;
+}
+.layout .mycenter-module .mycenter-module-li .companyAddress input{
+     border: none;
+    width: 4.9rem;
+    text-align: right;
+    font-size: 0.28rem; 
+}
+.layout .mycenter-module .mycenter-module-li .arrow {
+    vertical-align: middle;
+}
+
+.layout .mycenter-module .mycenter-module-li.text-center {
+    text-align: center;
+}
+
+ 
+
+.layout .mycenter-bottom {
+    text-align: center;
+}
+
+.layout .mycenter-bottom .logo {
+    width: 4rem;
+    height: 0.4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background: url("../img/mycenter/mycenter_logo.png");
+    background-size: cover;
+    margin-left: 2rem;
+}
+.layout .mycenter-module .mycenter-module-li img{
+    vertical-align: middle
+}
+.layout .mycenter-module .mycenter-module-li .info-1{
+    width: 0.31rem;
+    height: 0.29rem;
+}
+.layout .mycenter-module .mycenter-module-li .info-2{
+    width:0.31rem;
+    height: 0.27rem;
+}
+.layout .mycenter-module .mycenter-module-li .info-3{
+    width: 0.35rem;
+    height: 0.31rem;
+}
+.layout .mycenter-module .mycenter-module-li .info-4{
+    width: 0.21rem;
+    height: 0.3rem;
+}
+.layout .mycenter-module .mycenter-module-li .info-5{
+    width: 0.25rem;
+    height: 0.29rem;
+}
+.layout .mycenter-module .mycenter-module-li .info-6{
+    width: 0.3rem;
+    height: 0.22rem;
+}
+.layout .mycenter-module .mycenter-module-li .info-7{
+    width: 0.32rem;
+    height: 0.3rem;
+}
+.layout .mycenter-module .mycenter-module-li .info-8{
+    width: 0.14rem;
+    height: 0.33rem;
+}
+.layout .mycenter-module .mycenter-module-li .info-9{
+    width: 0.22rem;
+    height: 0.28rem;
+}
+.edit-btn{
+    width: 6.6rem;
+    height: 0.88rem;
+    font-size: 0.36rem;
+    background-color: #de443c;
+    color: #fff;
+    border:none;
+    outline: none;
+    margin: 0 0.45rem;
+    border-radius: 0.1rem;
+    
+}
+.upload{
+    display: inline-block;
+    width: 2rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    text-decoration: none;
+    color: #565656;
+    font-size: 0.28rem;
+}
+.file{
+    
+    overflow: hidden;
+    border:1px solid black;
+    opacity: 0;
+    width: 2rem;
+   height: 1.2rem;
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+
