@@ -1,0 +1,306 @@
+.product {
+	padding-bottom: 20px;
+}
+ 
+.product-detail .product-main {
+	width: 1180px;
+	background-color: #f1f1f1;
+	padding-top: 40px;
+	padding-bottom: 80px;
+}
+.product-detail .product-main .type-title{
+	color: #242424;
+	font-size: 20px;
+	font-weight: bold; 
+	margin-bottom: 16px;
+}
+.product-detail .product-main-tab {
+	height: 40px;
+	line-height: 40px;
+	background-color: #fff; 
+	border-bottom: 2px solid #de443c;
+	-moz-box-shadow:0px 2px 5px #b8b8b7; 
+	-webkit-box-shadow:0px 2px 5px #b8b8b7; 
+	 box-shadow:0px 2px 5px #b8b8b7; 
+}
+
+.product-detail .product-main-tab ul li {
+	float: left;
+}
+.product-detail .product-main-tab ul li a {
+	display: block;
+	padding: 0 25px;
+	font-size: 14px;
+	color: #757575;
+	height: 39px;
+}
+
+.product-detail .product-main-tab ul li.active a {
+	background-color: #DE443C;
+	padding: 0 24px;
+	color: #fff;
+	line-height: 40px;
+}
+
+.product-detail .product-main-tab ul li.first-li a {
+	border-left-color: #fff;
+}
+/*支付内容*/
+
+.method-content {
+    padding: 5px 0;
+    min-height: 350px;
+    background-color: #fff;
+    -moz-box-shadow:0px 2px 5px #b8b8b7; 
+	-webkit-box-shadow:0px 2px 5px #b8b8b7; 
+	 box-shadow:0px 2px 5px #b8b8b7; 
+}
+
+.method-content .method-wx{
+	margin-top: 70px;
+	margin-left: 35px;
+}
+.method-content .method-wx ul li {
+    position: relative;
+    float: left;
+    width: 220px;
+    height: 60px;
+    border: 1px solid #dadada;
+    padding: 14px 54px;
+    font-size: 12px;
+    color: #242424;
+    text-align: center;
+}
+
+.method-content .method-wx ul li.active {
+	border-color: #de443c;
+}
+
+.method-content .method-wx ul li img {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+/*微信付款码*/
+.method-content .method-wx .qrcode {
+    margin: 18px 0 24px 250px;
+    width: 220px;
+    height: 230px;
+    border: 1px solid #eee;
+}
+
+.method-content .method-wx .qrcode img {
+    width: 148px;
+    height: 148px;
+    margin: 10px 0 5px;
+}
+
+.method-content .method-wx .qrcode p {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+.method-content .personal-bank{
+    margin: 70px 0 212px 35px;
+}
+.method-content .personal-bank ul li {
+    position: relative;
+    float: left;
+    margin-right: 16px;
+    width: 140px;
+    height: 40px;
+    border: 1px solid #eee;
+    margin-bottom: 24px;
+    padding: 4px 0;
+    text-align: center;
+}
+.radio-hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    line-height: 1;
+}
+.self-transfer{
+	margin: 38px 0 200px 35px;
+}
+.self-transfer ul li {
+    float: left;
+    border: 1px solid #eee;
+    margin-right: 20px;
+    padding-right: 15px;
+}
+
+.self-transfer ul li.active {
+    border: 1px solid #e85555;
+}
+
+.self-transfer ul li img {
+    float: left;
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+    margin: 19px 10px 14px 11px;
+}
+
+.self-transfer ul li .self-right {
+    padding: 16px 0;
+    float: right;
+    height: 83px;
+}
+
+.self-transfer ul li .self-right p {
+    font-size: 14px;
+    color: #333;
+    line-height: 25px;
+    cursor: default;
+}
+
+.self-transfer ul li .self-right.line {
+    padding: 12px 0;
+}
+
+.self-transfer ul li .self-right.line p {
+    line-height: 20px;
+}
+
+.self-transfer ul li .self-right p span {
+    display: inline-block;
+    width: 95px;
+    text-align: right;
+}
+
+.self-transfer .self-note {
+    font-size: 14px;
+    color: #666;
+    margin: 34px 0 52px;
+}
+
+.self-transfer .self-tip {
+    margin: 34px 0 0 0 ;
+}
+
+.self-transfer .self-tip .self-note-2 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 17px;
+}
+
+.self-transfer .self-tip .self-note-3 {
+    margin-top: 35px;
+    font-size: 14px;
+    color: #333;
+}
+
+.self-transfer .self-tip .self-note-3 span {
+    margin-right: 10px;
+    color: #e85555;
+}
+
+.self-transfer .self-tip .self-tip-panel {
+    padding: 23px 34px;
+    background-color: #f6f6f6;
+}
+
+.self-transfer .self-tip .self-tip-panel p {
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.self-transfer .self-tip .self-tip-panel span {
+    display: inline-block;
+    margin-right: 24px;
+    width: 71px;
+    text-align: right;
+    color: #666;
+    font-size: 14px;
+}
+
+.self-transfer .self-btn {
+    display: inline-block;
+    width: 220px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.self-transfer .self-btn.no-used {
+    color: #de443c;
+    border: 1px solid #DE443C;
+}
+
+.self-transfer .self-note-type {
+    display: inline-block;
+    margin-left: 27px;
+    font-size: 14px;
+    color: #999;
+}
+
+
+.product-detail {
+	position: relative;
+}
+
+.absoluted {
+	position: absolute!important;
+	top: 0;
+	right: 0;
+}
+
+/*扫微信*/
+.know-poper {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -290px;
+	margin-top: -260px;
+	height: 520px;
+	width: 580px;
+	background: #ffffff;
+	z-index: 999999;
+	display: none;
+	text-align: center;
+}
+
+.know-poper .close {
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	cursor: pointer;
+	background: url("../../img/product/close.png") no-repeat scroll center center;
+}
+
+.know-poper .close:hover {
+	background: url("../../img/product/closeHover.png") no-repeat scroll center center;
+}
+
+.know-poper h4 {
+	font-size: 14px;
+	color: #595758;
+	text-align: center;
+	margin-top: 115px;
+	font-weight: bold;
+}
+
+.know-poper img {
+	max-width: 100%;
+	border: none;
+	vertical-align: top;
+	margin-top: 21px;
+	width: 250px;
+}

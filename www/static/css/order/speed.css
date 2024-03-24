@@ -1,0 +1,111 @@
+.tip_title {
+	height: 56px;
+	line-height: 56px;
+	font-size: 14px;
+}
+.sd-top{
+	background:url(../../img/speedman.png) no-repeat 285px -5px #fff;
+	line-height: 100px;
+	font-size: 24px;
+	color: #282828;
+	text-align: right;
+	padding-right: 170px;
+	margin-bottom: 30px;
+	-moz-box-shadow:0px 0px 6px #bebdbd;
+	-webkit-box-shadow:0px 0px 6px #bebdbd;
+	box-shadow:0px 0px 6px #bebdbd;
+}
+.package-status {
+	padding: 54px 0 0 140px;
+	background-color: #fff;
+	margin-bottom: 54px;
+	-moz-box-shadow:0px 0px 6px #bebdbd;
+	-webkit-box-shadow:0px 0px 6px #bebdbd;
+	box-shadow:0px 0px 6px #bebdbd;
+} 
+.package-status .status-box {
+	position: relative;
+	overflow: hidden
+}
+ .package-status .status-box:before {
+	content: " ";
+	background-color: #f3f3f3;
+	display: block;
+	position: absolute;
+	top: -2px;
+	left: 20px;
+	width: 10px;
+	height: 4px;
+}
+ 
+.package-status .status-list {
+	margin: 0;
+	padding: 0;
+	padding-top: 5px;
+	margin-left: 12px;
+	margin-top: 0px;
+	padding-left: 10px;
+	list-style: none;
+	font-size: 12px
+}
+.package-status .status-list .latest {
+	border: none;
+	color: #444;
+}
+.package-status .status-list .latest .text{
+	color: #f24233;
+}
+.package-status .status-list li {
+	margin-bottom: 0px;
+	height: 58px;  
+	border-left:1px solid #dadada !important;
+	color: #959595;
+	font-size: 16px;
+}
+.package-status .status-list li:last-child{
+	border-left:0 !important;
+}
+ 
+.package-status .status-list .date {
+	width: 78px
+	font-weight: 700;
+	margin-right: 8px; 
+
+}
+.package-status .status-list .week {
+	font-weight: 700;
+ 
+}
+.package-status .status-list .date,
+.package-status .status-list .week,
+.package-status .status-list .time {
+	display: inline-block
+}
+.package-status .status-list .time {
+	width: 48px;
+	margin-right: 28px;
+	margin-left: 5px
+}
+ 
+.package-status .status-list .text {
+	display: inline-block;
+	width: 635px;
+	vertical-align: text-top;
+	line-height: 17px
+}
+
+.package-status .status-list li:before {
+	content: '';
+	border: 3px solid #f3f3f3;
+	background-color: #d9d9d9;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 10px;
+	margin-left: -9px;
+	margin-right: 15px
+}
+.package-status .status-list .latest:before {
+	background-color: #fe4300;
+	border-color: #f9a69f;
+}

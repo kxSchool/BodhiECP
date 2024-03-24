@@ -1,0 +1,245 @@
+.layout {
+	background-color: #f1f1f1 !important;
+}
+
+.confirm {
+	background-color: #f1f1f1;
+}
+
+.container .tip_title p {
+	font-size: 20px;
+	color: #242424;
+	padding-top: 34px;
+	padding-bottom: 16px;
+	font-weight: bold;
+    font-size:14px;
+}
+
+.confirm .confirm_core {
+	background-color: #fff;
+	-moz-box-shadow:0px 2px 5px #b8b8b7; 
+	-webkit-box-shadow:0px 2px 5px #b8b8b7; 
+	 box-shadow:0px 2px 5px #b8b8b7; 
+}
+
+.confirm .table_title {
+	border-bottom: 2px solid #de443c;
+	padding-left: 35px;
+	padding-right: 35px;
+}
+
+.confirm .table_title span {
+	height: 46px;
+	line-height: 46px;
+	display: inline-block;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+.confirm .table_title span:nth-of-type(1) {
+	width: 330px;
+}
+
+.confirm .table_title span:nth-of-type(2) {
+	width: 318px;
+}
+
+.confirm .table_title span:nth-of-type(3) {
+	width: 232px;
+}
+
+.confirm .table_title span:nth-of-type(4) {
+	width: 219px;
+}
+
+.confirm table {
+	width: 1112px;
+	padding: 0;
+	margin: 0;
+	border-collapse: collapse;
+	margin: 0 35px 0 35px;
+}
+
+
+.confirm td {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	border-bottom: 1px solid #dadada;
+	vertical-align: middle;
+}
+.confirm tr:nth-last-child(1) td{
+	border-bottom: none;
+}
+.confirm td .left-info {
+	margin: 10px 0;
+	position: relative;
+}
+.confirm td .left-input {
+	position: absolute;
+	top: 25px;
+	left: 0;
+}
+
+.confirm td .left-input,
+.Iconimg {
+	display: inline-block;
+}
+.left-info .Iconimg {
+    float: left;
+    width: 72px;
+    height: 72px;
+    margin: 0 20px 10px 45px;
+}
+.left-info .Iconimg img {
+    width: 100%;
+    height: 100%;
+}
+.confirm td .left-p {
+	margin-left: 70px;
+    padding-top: 15px;
+}
+
+.confirm td .center-img {
+	margin-left: 25px;
+}
+
+.confirm td .left-input input {
+	border: 1px solid #DE443C;
+	height: 17px;
+	width: 17px;
+}
+
+.confirm td .left-title {
+	text-align: left;
+	font-size: 14px;
+	color: #242424;
+	/*height: 20px;*/
+}
+
+.confirm td .left-area {
+	text-align: left;
+	font-size: 12px;
+	color: #818181;
+	margin-top: 20px;
+}
+
+.confirm td .left-service {
+	text-align: left;
+	font-size: 12px;
+	color: #818181;
+	height: 20px;
+}
+
+.confirm td:nth-of-type(1) {
+	width: 330px;
+	text-align: left;
+}
+
+.confirm td:nth-of-type(2) {
+	width: 318px;
+}
+
+.confirm td:nth-of-type(3) {
+	width: 232px;
+}
+
+.confirm td:nth-of-type(4) {
+	width: 234px;
+}
+
+
+/*数量的样式 S*/
+
+.confirm_core .num-panel {
+	margin-left: 96px;
+}
+
+.confirm_core .num-panel a {
+	float: left;
+	display: inline-block;
+	width: 20px;
+	height: 24px;
+	color: #666;
+	border: 1px solid #ddd;
+	font-size: 14px;
+	line-height: 20px;
+	background-color: #f6f6f6;
+}
+
+.confirm_core .num-display {
+	float: left;
+	width: 26px;
+	height: 24px;
+	text-align: center;
+	border: none;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	outline: none;
+}
+.confirm_core .panel-price{
+	color: #DE443C;
+	font-size: 12px;
+}
+
+/*数量的样式 E*/
+/*结算样式 S*/
+.total{
+	padding-top: 64px;
+	margin-bottom: 80px;
+}
+.total ul{
+	margin-right: 34px;
+}
+.total ul li {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.total ul li em {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #999;
+    background: url(../../img/product/down.png) no-repeat 1px 2px;
+    vertical-align: middle;
+}
+.total ul li input {
+    -webkit-appearance: none;
+    margin: 0;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: top;
+    background: url(../../img/product/checkbox.png) -6px -32px no-repeat;
+    border: none;
+}
+.total ul li span {
+    margin-left: 100px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #242424;
+    display: inline-block;
+    
+}
+.total ul li span.money{
+	color: #989898;
+}
+.total ul li span.total-money{
+	font-size: 20px;
+	color: #DE443C;
+	font-weight: bold;
+}
+.total .total-submit {
+    display: inline-block;
+    width: 180px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: #DE443C;
+    text-align: center;
+    line-height: 48px;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 35px;
+}
+/*结算样式 E*/

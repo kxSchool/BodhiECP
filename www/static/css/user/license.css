@@ -1,0 +1,65 @@
+.bg-white {
+    background-color: #fff !important;
+}
+.container .mycenter {
+	padding-bottom: 160px;
+}
+
+.tip_title {
+	height: 56px;
+	line-height: 56px;
+	font-size: 14px;
+}
+
+
+/*用户服务协议   S*/
+.consult-content{ 
+	text-align: center;
+}
+.help-head h1{
+	font-size: 32px;
+    font-weight: bold;
+    color: #000;
+}
+.help-head h5{
+	border-bottom:1px solid #dadada;
+	height: 20px;
+	margin-top: 30px;
+	padding-bottom: 50px;
+}
+.help-head h5 .time{
+	margin-right: 50px;
+    font-size: 14px;
+    color: #727171;
+}
+.help-head h5 .visit{
+	font-size: 14px;
+    color: #727171;
+}
+.about-content{
+	text-align: left;
+	padding: 50px 20px; 
+}
+.about-content .clause-item{
+	margin: 20px auto; 
+}
+.about-content .clause{
+	line-height: 28px;
+}
+.about-content .Subtitle{
+	font-size: 20px;
+    color: #242424;
+    font-weight: bold;
+    word-spacing: 10px;
+}
+.about-content p {
+    color: #666666;
+    line-height: 20px;
+    font-size: 14px;
+    word-wrap: break-word;
+    color: #1d1d1d;
+    border: none;
+    outline: none;
+    max-height: 100%; 
+}
+/*用户服务协议   E*/

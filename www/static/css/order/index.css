@@ -1,0 +1,277 @@
+.container .mycenter{
+	background: #F1F1F1;
+	padding-bottom: 80px;
+}
+
+.tip_title {
+	height: 56px;
+	line-height: 56px;
+}
+ 
+.myCont {
+	width: 1010px;
+	min-height: 532px;
+	background: #fff;
+	-moz-box-shadow:0px 0px 6px #bebdbd;
+	-webkit-box-shadow:0px 0px 6px #bebdbd;
+	box-shadow:0px 0px 6px #bebdbd;
+}
+.myCont .person-main-tab {
+	height: 40px;
+	line-height: 40px;
+	background-color: #f8f8f8; 
+}
+
+.myCont .person-main-tab ul li {
+	float: left;
+}
+ 
+.myCont .person-main-tab ul li a {
+	display: block;
+	padding: 0 25px;
+	font-size: 14px;
+	color: #757575;
+	height: 39px;
+}
+
+.myCont .person-main-tab ul li.active a {
+	background-color: #fff;
+	padding: 0 24px;
+	color: #DE443C;
+	line-height: 40px;
+	border-top:2px solid #DE443C;
+}
+ 
+.myCont .method-content {
+    /*min-height: 626px;*/
+}
+ 
+/*无数据 S*/
+ 
+.method-content .noData{
+	width: 380px;
+	height: 225px;
+	margin: 0 306px 206px 326px;
+	padding: 40px 24px 20px 82px; 
+}
+.method-content .noData img{
+	height: 136px;
+	text-align: center;
+	margin-bottom: 30px; 
+}
+.method-content .noData p{
+	font-size: 12px;
+	color: #4c4c4c; 
+}
+ 
+/*无数据 E*/
+
+ /*全部订单 S*/
+ 
+.all-order .u-panel-inner{ 
+	padding: 20px 20px;
+}
+.all-order .u-panel-inner table {
+    width: 100%; 
+    color: #111;
+}
+.all-order .u-panel-inner table tr td {
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    vertical-align: middle;
+}
+.all-order .u-panel-inner table thead tr th {
+    height: 36px;
+    vertical-align: middle;
+    color: #5f5f89;
+}
+.all-order .u-panel-inner table tbody{
+	margin-bottom: 20px;
+
+}
+.all-order .u-panel-inner table tbody tr td {
+    height: 60px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+.all-order .u-panel-inner table tbody tr td .order-company{
+	font-size: 14px;
+	color: #242424;
+}
+.all-order .u-panel-inner table tbody tr td .order-company:hover{
+	color: #DE443C;
+}
+.all-order .u-panel-inner table tbody tr td.b-l-n {
+    border-left:1px solid #eee;
+}
+
+.all-order .u-panel-inner table tbody tr td.b-r-n {
+    border-right:1px solid #eee;
+}
+.all-order .u-panel-inner table tbody tr td .order-info{ 
+	margin: 16px 0;
+	
+}
+ .all-order .u-panel-inner table tbody tr td .order-info .Iconimg{ 
+ 	float: left; 
+	width: 72px;
+	height: 72px;
+ }
+  .all-order .u-panel-inner table tbody tr td .order-info .Iconimg img{
+  	width: 100%;
+  	height: 100%;
+  }
+.all-order .u-panel-inner table tbody tr td .order-info{ 
+	margin: 16px 0;
+}
+ 
+.all-order .u-panel-inner table tbody tr td .order-info .order-right{
+	display: inline-block; 
+	margin-left: 18px;
+}
+.all-order .u-panel-inner table tbody tr td .order-info .order-right p:nth-of-type(1){
+	margin-bottom: 8px;
+}
+
+.all-order .u-panel-inner table tbody tr td.b-n {
+    border-left: none;
+    border-right: none;
+}
+
+.all-order .u-panel-inner table tbody tr.body-head td {
+    padding-left: 17px;
+    height: 36px;
+    background-color: #eee;
+    vertical-align: middle;
+    color: #818181;
+}
+.all-order .u-panel-inner table tbody tr.body-head .text-left{
+	padding-top: 10px;
+}
+.all-order .u-panel-inner table tbody tr.body-head .deleteBtn{
+	float: right;
+	margin-right: 20px; 
+    cursor: pointer;
+}
+.all-order .u-panel-inner table tbody tr.body-head td span:nth-of-type(1){
+	margin-right: 16px;
+}
+
+.all-order .u-panel-inner table tbody tr td.body-fee {
+    padding: 15px 0;
+}
+.all-order .u-panel-inner table tbody tr td.body-btn{
+	border-left: 1px solid #dadada;
+}
+.all-order .u-panel-inner table tbody tr td.body-btn a {
+    margin: auto;
+    display: block;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    color: #007bc7;
+}
+
+.all-order .u-panel-inner table tbody tr td.body-btn a.pay {
+	width: 60px;
+	height: 28px;
+    background-color: #f95b53;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.all-order .u-panel-inner table tbody tr td.body-btn a.pay:hover {
+    background-color: #de443c;
+} 
+
+.all-order .u-panel-inner table tbody tr td.body-btn span {
+    color: #007bc7;
+}
+
+.all-order .u-panel-inner table tbody tr td.waiting {
+    color: #e66758;
+
+}
+
+.all-order .u-panel-inner table tbody tr td.is-paid {
+    color: #00b095;
+}
+
+.all-order .u-panel-inner table tbody tr td .color-red {
+    color: #e65658;
+}
+.all-order .u-panel-inner table thead .white-space,
+.all-order .u-panel-inner table thead .white-space th,
+.all-order .u-panel-inner table thead .white-space td,
+.all-order .u-panel-inner table tbody .white-space th,
+.all-order .u-panel-inner table tbody .white-space td {
+    border: none;
+    height: 22px;
+    background-color: #fff;
+}
+/*页码设置 S*/
+.paginations {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;  
+}
+.paginations li{
+	float: left; 
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border:1px solid #bfbfbf;
+	font-size: 12px;
+	color: #4c4c4c;
+	margin: 0 3px;
+	background-color: #f4f4f4;
+}
+ .paginations li a{
+    color:#000;
+    }
+.paginations li.active{
+	background-color: #DE443C; 
+	border: 0;
+}
+.paginations li.active a{
+	color: #fff;
+}
+.paginations .pre-page {
+	width: 70px;
+	height: 30px;
+	line-height: 30px;
+	border:1px solid #bfbfbf;
+	font-size: 12px;
+	color: #4c4c4c;
+}
+.paginations  .next-page{
+	width: 70px;
+	height: 30px;
+	line-height: 30px;
+	border:1px solid #bfbfbf;
+	font-size: 12px;
+	color: #4c4c4c;
+}
+ 
+/*页码设置 E*/
+
+/*全部订单 E*/
+ /*无数据 S*/
+ 
+.method-content .noData{
+	width: 380px;
+	height: 225px;
+	margin: 0 306px 206px 326px;
+	padding: 40px 24px 20px 82px; 
+}
+.method-content .noData img{
+	height: 136px;
+	text-align: center;
+	margin-bottom: 30px; 
+}
+.method-content .noData p{
+	font-size: 12px;
+	color: #4c4c4c; 
+}
+ 
+/*无数据 E*/

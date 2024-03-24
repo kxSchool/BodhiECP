@@ -1,0 +1,149 @@
+body {
+	display: flex;
+	min-height: 100vh;
+	background-color: #f3f3f3;
+	flex-flow: column;
+}
+
+header {
+	display: block;
+	background: #fff;
+	height: 100px;
+}
+footer{
+	display: block;
+	padding-bottom: 100px;
+	background-color: #F9F8F4
+}
+footer p{
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+}
+.container {
+	margin: 0 auto;
+	width: 1180px;
+	height: auto;  
+}
+ 
+
+.floatleft a {
+	display: block;
+	width: 278px;
+	height: 54px;
+	margin-top: 23px;
+}
+
+.floatleft a img {
+	 
+	background-size: cover;
+}
+
+.container .rel {
+	font-size: 25px;
+	color: #DE443C;
+	line-height: 100px;
+	float: right;
+	width: 220px;
+	background: url(../../img/common/phone_logo.png) 0 26px no-repeat;
+}
+
+.container .rel a {
+	margin-left: 56px;
+}
+
+.layout {
+	background-color: #f9f8f4;
+}
+
+.forPwd{
+ 	background-color: #fff;
+ 	margin: 84px 0px 116px;
+ 	height: 520px;
+ 	border: 1px solid #fff;
+}
+.forPwd .for-main{  
+	margin: 94px 308px 30px 398px;
+	text-align: center;
+}
+.forPwd .for-main label{
+	width: 60px;
+	height: 45px;
+	line-height: 45px;
+	display: inline-block; 
+	font-size: 12px;
+	color: #444;
+}
+.forPwd .for-main input{
+	height: 45px;
+	border: 1px solid #eee;
+	padding-left: 28px;
+	width: 318px;
+	margin-bottom: 20px;
+	outline: none;
+	border:none;
+	border-bottom: 1px solid #dadada;
+}
+.forPwd .for-main .userPw{
+	position: relative; 
+}
+.forPwd .for-main .getcode{
+	position: absolute;
+	right: 96px;
+	top:11px;
+	border: none;
+	border-left: 1px solid #dadada;
+	height: 28px;
+	width: 90px;
+	color: #DE443C;
+	font-size: 12px;
+	background-color: #fff;
+	
+}
+.forBtn{
+	width: 120px;
+	height: 45px;
+	background-color: #DE443C;
+	outline: none;
+	border: none;
+	color: #fff;
+	border-radius: 4px;
+	font-size: 16px;
+	margin-top: 22px;
+}
+/*错误框提示*/
+ .same-error{ 
+ 	text-align: left;
+ 	position: relative;
+ 	top:-9px;
+ 	padding-left: 133px;
+ 	height: 22px;
+ 	line-height: 0px; 
+ }
+.same-error img{
+	position: absolute;
+	left: 2px;
+	top:-7px;
+	left:110px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    background: url(../img/index/login_conf.png) no-repeat;
+}
+ .same-error span {
+    font-size: 12px;
+    color: #de443c;
+}
+ ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+   color: #999999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #999999;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #999999;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #999999;
+}
