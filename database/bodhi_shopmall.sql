@@ -11,7 +11,7 @@
  Target Server Version : 50733
  File Encoding         : 65001
 
- Date: 23/03/2024 11:17:24
+ Date: 24/03/2024 21:59:45
 */
 
 SET NAMES utf8mb4;
@@ -194,7 +194,7 @@ CREATE TABLE `admin`  (
 -- ----------------------------
 -- Records of admin
 -- ----------------------------
-INSERT INTO `admin` VALUES (1, 'admin', '96e79218965eb72c92a549dd5a330112', '系统管理员', 1, '15618645670', 'admin@bodhitest.com', '112.2.149.161', 1694150798, '192.168.31.195', 1711116872, 0);
+INSERT INTO `admin` VALUES (1, 'admin', '96e79218965eb72c92a549dd5a330112', '系统管理员', 1, '15618645670', 'admin@bodhitest.com', '112.2.149.161', 1694150798, '192.168.31.195', 1711117791, 0);
 
 -- ----------------------------
 -- Table structure for admin_priv
@@ -681,7 +681,7 @@ CREATE TABLE `members1`  (
 -- ----------------------------
 -- Records of members1
 -- ----------------------------
-INSERT INTO `members1` VALUES (12, '153****5719', 'd2a933660afaad4092e97d6a0f684ff6', 'ncLmgT', 0, 0, '张三', '', 0, '', '', '', '', '', 0, '15371715719', 1, 1529748064, '101.87.3.36', 1711116853, '192.168.31.195', 0, 0, '', '', '', '', '', 0, 0.00, '', '', '', 0, '2017-10-23 13:46:53', 2, 0, '', 0, '', '', '', '', NULL, NULL, NULL, NULL, 0);
+INSERT INTO `members1` VALUES (12, '153****5719', 'd2a933660afaad4092e97d6a0f684ff6', 'ncLmgT', 0, 0, '张三', '', 0, '', '', '', '', '', 0, '15371715719', 1, 1529748064, '101.87.3.36', 1711120987, '192.168.31.195', 0, 0, '', '', '', '', '', 0, 0.00, '', '', '', 0, '2017-10-23 13:46:53', 2, 0, '64dfb28e-a25a-4fba-9389-46eb9ff71f3b', 0, '', '', '', '', NULL, NULL, NULL, NULL, 0);
 INSERT INTO `members1` VALUES (241, '18621153185', '65313bd486ffc8eb4d9aecaebeee4e19', 'jcYQxz', 0, 0, '上海章大牛企业管理有限公司', '28586585@qq.com', 0, '', '', '', '', '', 0, '18621153185', 2, 1530271458, '101.87.3.36', 1710895800, '112.2.149.76', 0, 0, '', '', '', '', '', 0, 76970.05, '', '', '', 100, '2017-10-23 13:46:53', 2, 0, '', 0, '唧唧', 'vh556', '', '', NULL, 10, 109, 1215, 0);
 
 -- ----------------------------
@@ -859,11 +859,31 @@ CREATE TABLE `region`  (
   INDEX `parent_id`(`parent_id`) USING BTREE,
   INDEX `region_type`(`region_type`) USING BTREE,
   INDEX `agency_id`(`agency_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 4049 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '邮政地址管理表' ROW_FORMAT = DYNAMIC;
+) ENGINE = MyISAM AUTO_INCREMENT = 4049 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '邮政地址管理表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of region
 -- ----------------------------
+INSERT INTO `region` VALUES (1, 0, '全国', 0, 0, '', 0);
+INSERT INTO `region` VALUES (10, 1, '上海', 1, 0, '0031', 0);
+INSERT INTO `region` VALUES (109, 10, '上海市', 2, 0, '3100', 0);
+INSERT INTO `region` VALUES (1215, 109, '黄浦区', 3, 0, '', 1);
+INSERT INTO `region` VALUES (1217, 109, '徐汇区', 3, 0, '', 2);
+INSERT INTO `region` VALUES (1218, 109, '长宁区', 3, 0, '', 3);
+INSERT INTO `region` VALUES (1219, 109, '静安区', 3, 0, '', 4);
+INSERT INTO `region` VALUES (1220, 109, '普陀区', 3, 0, '', 5);
+INSERT INTO `region` VALUES (1222, 109, '虹口区', 3, 0, '', 6);
+INSERT INTO `region` VALUES (1223, 109, '杨浦区', 3, 0, '', 7);
+INSERT INTO `region` VALUES (1224, 109, '闵行区', 3, 0, '', 8);
+INSERT INTO `region` VALUES (1225, 109, '宝山区', 3, 0, '', 9);
+INSERT INTO `region` VALUES (1226, 109, '嘉定区', 3, 0, '', 10);
+INSERT INTO `region` VALUES (1227, 109, '浦东新区', 3, 0, '', 11);
+INSERT INTO `region` VALUES (1228, 109, '金山区', 3, 0, '', 11);
+INSERT INTO `region` VALUES (1229, 109, '松江区', 3, 0, '', 12);
+INSERT INTO `region` VALUES (1230, 109, '青浦区', 3, 0, '', 13);
+INSERT INTO `region` VALUES (1232, 109, '奉贤区', 3, 0, '', 14);
+INSERT INTO `region` VALUES (1234, 109, '崇明区', 3, 0, '', 15);
+INSERT INTO `region` VALUES (1235, 109, '自贸区', 3, 0, '', 16);
 
 -- ----------------------------
 -- Table structure for remind
