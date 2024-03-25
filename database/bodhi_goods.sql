@@ -11,44 +11,11 @@
  Target Server Version : 50733
  File Encoding         : 65001
 
- Date: 24/03/2024 21:59:13
+ Date: 25/03/2024 09:47:07
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-
--- ----------------------------
--- Table structure for attribute
--- ----------------------------
-DROP TABLE IF EXISTS `attribute`;
-CREATE TABLE `attribute`  (
-  `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `name` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '属性名称',
-  `pid` mediumint(8) UNSIGNED NOT NULL COMMENT '上级id',
-  `catid` mediumint(8) UNSIGNED NOT NULL COMMENT '分类id',
-  `desc` tinyint(4) NOT NULL COMMENT '属性描述：排序',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '产品属性表' ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of attribute
--- ----------------------------
-
--- ----------------------------
--- Table structure for brand
--- ----------------------------
-DROP TABLE IF EXISTS `brand`;
-CREATE TABLE `brand`  (
-  `id` int(8) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `name` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '品牌名称',
-  `logoimg` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'logo图片',
-  `desc` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '描述',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 172 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '品牌表' ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of brand
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for category
@@ -217,41 +184,6 @@ INSERT INTO `category` VALUES (155, '社保开户', 4, 0, 1, 1, 0);
 INSERT INTO `category` VALUES (156, '公积金开户', 4, 0, 1, 1, 0);
 INSERT INTO `category` VALUES (157, '银行开户', 4, 0, 0, 0, 1);
 INSERT INTO `category` VALUES (154, '法人一证通办理', 4, 0, 0, 1, 0);
-
--- ----------------------------
--- Table structure for category_brand
--- ----------------------------
-DROP TABLE IF EXISTS `category_brand`;
-CREATE TABLE `category_brand`  (
-  `cat_id` mediumint(9) NOT NULL,
-  `brand_id` mediumint(9) NOT NULL,
-  `sort` tinyint(4) NULL DEFAULT NULL,
-  INDEX `cat_id`(`cat_id`) USING BTREE,
-  INDEX `brand_id`(`brand_id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '分类与品牌关联表' ROW_FORMAT = FIXED;
-
--- ----------------------------
--- Records of category_brand
--- ----------------------------
-
--- ----------------------------
--- Table structure for constant
--- ----------------------------
-DROP TABLE IF EXISTS `constant`;
-CREATE TABLE `constant`  (
-  `cat_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `cat_code` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '常量简写名',
-  `cat_name` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '分类名称',
-  `cat_pid` mediumint(8) UNSIGNED NOT NULL COMMENT '上级id',
-  `cat_desc` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '分类描述',
-  `sort` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT '常量排序值',
-  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '常量状态: 1 开启,0 关闭',
-  PRIMARY KEY (`cat_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 19256 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '产品分类表' ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of constant
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for enter_category
@@ -639,42 +571,6 @@ INSERT INTO `goods` VALUES (220, 0, '社保开户', '', 1, 4, 155, '<p><img src=
 INSERT INTO `goods` VALUES (221, 0, '公积金开户', '', 1, 4, 156, '<p><img src=\"http://admin.bodhitest.com/uploads/goods_details/goods_153380459280.jpg\" style=\"max-width:100%;\"><br></p><p><br></p>', '<p><img src=\"http://admin.kxschool.com/uploads/goods_details/goods_153380460445.jpg\" style=\"max-width:100%;\"><br></p><p><br></p>', 0, '', '', '', 0, '', 0, '', '', '', 0, '', '', 0, '', '', 0, 0, 1, '', 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, '', '');
 
 -- ----------------------------
--- Table structure for goods_attribute
--- ----------------------------
-DROP TABLE IF EXISTS `goods_attribute`;
-CREATE TABLE `goods_attribute`  (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '产品属性id',
-  `attrvalue` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '属性id(父id+\"_\"+自己id)',
-  `attrname` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '属性名称',
-  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '产品属性状态: 1 开启, 0 关闭 ',
-  `prtid` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT '产品主表id',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '产品属性关联表' ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of goods_attribute
--- ----------------------------
-
--- ----------------------------
--- Table structure for goods_category
--- ----------------------------
-DROP TABLE IF EXISTS `goods_category`;
-CREATE TABLE `goods_category`  (
-  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '分类名称',
-  `code` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '编码',
-  `pid` int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT '上级分类id',
-  `sort` int(11) NOT NULL COMMENT '排序',
-  `company_id` int(11) UNSIGNED NOT NULL COMMENT '公司id',
-  `enable` tinyint(1) UNSIGNED NOT NULL DEFAULT 1 COMMENT '是否有效 0无效，1有效，2删除',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品分类表' ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of goods_category
--- ----------------------------
-
--- ----------------------------
 -- Table structure for goods_ex
 -- ----------------------------
 DROP TABLE IF EXISTS `goods_ex`;
@@ -685,47 +581,190 @@ CREATE TABLE `goods_ex`  (
   `class_tag` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '关联商品编号（12,13,14,15）',
   `param` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '分类默认值',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 198 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '产品关联表' ROW_FORMAT = DYNAMIC;
+) ENGINE = MyISAM AUTO_INCREMENT = 198 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '产品关联表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of goods_ex
 -- ----------------------------
-
--- ----------------------------
--- Table structure for goods_factory
--- ----------------------------
-DROP TABLE IF EXISTS `goods_factory`;
-CREATE TABLE `goods_factory`  (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '厂商id',
-  `factname` varchar(120) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '生产厂商名称',
-  `factcode` varchar(18) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '厂商编码',
-  `factaddress` varchar(120) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '厂商地址',
-  `factphone` char(13) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '厂商联系电话',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 308 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品生产商(厂商)信息' ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of goods_factory
--- ----------------------------
-
--- ----------------------------
--- Table structure for goods_gallery
--- ----------------------------
-DROP TABLE IF EXISTS `goods_gallery`;
-CREATE TABLE `goods_gallery`  (
-  `img_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `goods_id` mediumint(8) UNSIGNED NOT NULL DEFAULT 0,
-  `img_url` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
-  `img_desc` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
-  `thumb_url` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
-  `img_original` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
-  PRIMARY KEY (`img_id`) USING BTREE,
-  INDEX `goods_id`(`goods_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 164 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of goods_gallery
--- ----------------------------
+INSERT INTO `goods_ex` VALUES (6, 2, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (7, 2, '选择银行开户', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理银行开户\",\"price\":\"0.00\"},{\"id\":\"20\",\"name\":\"请为我预约银行开户\"},{\"id\":\"19\",\"name\":\"请为我办理银行开户\"}]');
+INSERT INTO `goods_ex` VALUES (8, 2, '选择税种核定', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理税种核定\",\"price\":\"0.00\"},{\"id\":\"122\",\"name\":\"请为我办理税种核定(包含官费530元)\"}]');
+INSERT INTO `goods_ex` VALUES (9, 2, '选择会计服务', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我有自己的会计\",\"price\":\"0.00\"},{\"id\":\"116\",\"name\":\"一年代理记账服务(小规模)\"},{\"id\":\"119\",\"name\":\"一年代理记账服务(一般纳税人)\"}]');
+INSERT INTO `goods_ex` VALUES (10, 2, '选择社保/公积金', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理\",\"price\":\"0.00\"},{\"id\":\"194\",\"name\":\"请为我办理社保开户\"},{\"id\":\"195\",\"name\":\"请为我办理公积金开户\"},{\"id\":\"196\",\"name\":\"请为我办理社保公积金开户\"}]');
+INSERT INTO `goods_ex` VALUES (11, 3, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (12, 3, '选择银行开户', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理银行开户\",\"price\":\"0.00\"},{\"id\":\"20\",\"name\":\"请为我预约银行开户\"},{\"id\":\"19\",\"name\":\"请为我办理银行开户\"}]');
+INSERT INTO `goods_ex` VALUES (13, 3, '选择税种核定', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理税种核定\",\"price\":\"0.00\"},{\"id\":\"122\",\"name\":\"请为我办理税种核定(包含官费530元)\"}]');
+INSERT INTO `goods_ex` VALUES (14, 3, '选择会计服务', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我有自己的会计\",\"price\":\"0.00\"},{\"id\":\"116\",\"name\":\"一年代理记账服务(小规模)\"},{\"id\":\"119\",\"name\":\"一年代理记账服务(一般纳税人)\"}]');
+INSERT INTO `goods_ex` VALUES (15, 3, '选择社保/公积金', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理\",\"price\":\"0.00\"},{\"id\":\"194\",\"name\":\"请为我办理社保开户\"},{\"id\":\"195\",\"name\":\"请为我办理公积金开户\"},{\"id\":\"196\",\"name\":\"请为我办理社保公积金开户\"}]');
+INSERT INTO `goods_ex` VALUES (16, 4, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (17, 4, '选择银行开户', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理银行开户\",\"price\":\"0.00\"},{\"id\":\"20\",\"name\":\"请为我预约银行开户\"},{\"id\":\"19\",\"name\":\"请为我办理银行开户\"}]');
+INSERT INTO `goods_ex` VALUES (18, 4, '选择税种核定', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理税种核定\",\"price\":\"0.00\"},{\"id\":\"122\",\"name\":\"请为我办理税种核定(包含官费530元)\"}]');
+INSERT INTO `goods_ex` VALUES (19, 4, '选择会计服务', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我有自己的会计\",\"price\":\"0.00\"},{\"id\":\"116\",\"name\":\"一年代理记账服务(小规模)\"},{\"id\":\"119\",\"name\":\"一年代理记账服务(一般纳税人)\"}]');
+INSERT INTO `goods_ex` VALUES (20, 4, '选择社保/公积金', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理\",\"price\":\"0.00\"},{\"id\":\"194\",\"name\":\"请为我办理社保开户\"},{\"id\":\"195\",\"name\":\"请为我办理公积金开户\"},{\"id\":\"196\",\"name\":\"请为我办理社保公积金开户\"}]');
+INSERT INTO `goods_ex` VALUES (21, 5, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (22, 5, '选择银行开户', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理银行开户\",\"price\":\"0.00\"},{\"id\":\"20\",\"name\":\"请为我预约银行开户\"},{\"id\":\"19\",\"name\":\"请为我办理银行开户\"}]');
+INSERT INTO `goods_ex` VALUES (23, 5, '选择税种核定', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理税种核定\",\"price\":\"0.00\"},{\"id\":\"122\",\"name\":\"请为我办理税种核定(包含官费530元)\"}]');
+INSERT INTO `goods_ex` VALUES (24, 5, '选择会计服务', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我有自己的会计\",\"price\":\"0.00\"},{\"id\":\"116\",\"name\":\"一年代理记账服务(小规模)\"},{\"id\":\"119\",\"name\":\"一年代理记账服务(一般纳税人)\"}]');
+INSERT INTO `goods_ex` VALUES (25, 5, '选择社保/公积金', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理\",\"price\":\"0.00\"},{\"id\":\"194\",\"name\":\"请为我办理社保开户\"},{\"id\":\"195\",\"name\":\"请为我办理公积金开户\"},{\"id\":\"196\",\"name\":\"请为我办理社保公积金开户\"}]');
+INSERT INTO `goods_ex` VALUES (26, 6, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (27, 6, '选择银行开户', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理银行开户\",\"price\":\"0.00\"},{\"id\":\"20\",\"name\":\"请为我预约银行开户\"},{\"id\":\"19\",\"name\":\"请为我办理银行开户\"}]');
+INSERT INTO `goods_ex` VALUES (28, 6, '选择税种核定', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理税种核定\",\"price\":\"0.00\"},{\"id\":\"122\",\"name\":\"请为我办理税种核定(包含官费530元)\"}]');
+INSERT INTO `goods_ex` VALUES (29, 6, '选择会计服务', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我有自己的会计\",\"price\":\"0.00\"},{\"id\":\"116\",\"name\":\"一年代理记账服务(小规模)\"},{\"id\":\"119\",\"name\":\"一年代理记账服务(一般纳税人)\"}]');
+INSERT INTO `goods_ex` VALUES (30, 6, '选择社保/公积金', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理\",\"price\":\"0.00\"},{\"id\":\"194\",\"name\":\"请为我办理社保开户\"},{\"id\":\"195\",\"name\":\"请为我办理公积金开户\"},{\"id\":\"196\",\"name\":\"请为我办理社保公积金开户\"}]');
+INSERT INTO `goods_ex` VALUES (31, 7, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (32, 7, '选择银行开户', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理银行开户\",\"price\":\"0.00\"},{\"id\":\"20\",\"name\":\"请为我预约银行开户\"},{\"id\":\"19\",\"name\":\"请为我办理银行开户\"}]');
+INSERT INTO `goods_ex` VALUES (33, 7, '选择税种核定', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理税种核定\",\"price\":\"0.00\"},{\"id\":\"122\",\"name\":\"请为我办理税种核定(包含官费530元)\"}]');
+INSERT INTO `goods_ex` VALUES (34, 7, '选择会计服务', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我有自己的会计\",\"price\":\"0.00\"},{\"id\":\"116\",\"name\":\"一年代理记账服务(小规模)\"},{\"id\":\"119\",\"name\":\"一年代理记账服务(一般纳税人)\"}]');
+INSERT INTO `goods_ex` VALUES (35, 7, '选择社保/公积金', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理\",\"price\":\"0.00\"},{\"id\":\"194\",\"name\":\"请为我办理社保开户\"},{\"id\":\"195\",\"name\":\"请为我办理公积金开户\"},{\"id\":\"196\",\"name\":\"请为我办理社保公积金开户\"}]');
+INSERT INTO `goods_ex` VALUES (36, 159, '选择商标注册', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要注册商标\",\"price\":\"0.00\"},{\"id\":\"162\",\"name\":\"请为我注册商标\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (37, 159, '选择版权申请', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要申请版权\",\"price\":\"0.00\"},{\"id\":\"167\",\"name\":\"请为我申请版权\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (38, 31, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (39, 31, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (40, 31, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (41, 32, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (42, 32, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (43, 32, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (44, 33, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (45, 33, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (46, 33, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (47, 34, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (48, 34, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (49, 34, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (50, 35, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (51, 35, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (52, 35, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (53, 36, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (54, 36, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (55, 36, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (56, 37, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (57, 37, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (58, 37, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (59, 38, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (60, 38, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (61, 38, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (62, 39, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (63, 39, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (64, 39, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (65, 40, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (66, 40, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (67, 40, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (68, 41, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (69, 41, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (70, 41, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (71, 42, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (72, 42, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (73, 42, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (74, 43, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (75, 43, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (76, 43, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (77, 44, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (78, 44, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (79, 44, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (80, 45, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (81, 45, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (82, 45, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (83, 46, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (84, 46, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (85, 46, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (86, 47, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (87, 47, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (88, 47, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (89, 48, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (90, 48, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (91, 48, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (92, 49, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (93, 49, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (94, 49, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (95, 50, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (96, 50, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (97, 50, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (98, 51, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (99, 51, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (100, 51, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (101, 52, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (102, 52, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (103, 52, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (104, 53, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (105, 53, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (106, 53, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (107, 54, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (108, 54, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (109, 54, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (110, 55, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (111, 55, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (112, 55, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (113, 56, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (114, 56, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (115, 56, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (116, 57, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (117, 57, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (118, 57, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (119, 58, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (120, 58, '选择人员资质', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的人员资质\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供人员资质\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (121, 58, '选择是否需要增资', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要增资\",\"price\":\"0.00\"},{\"id\":\"0\",\"name\":\"请为我提供增资出具验资报告\",\"price\":\"0.00\"}]');
+INSERT INTO `goods_ex` VALUES (122, 10, '名称变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要名称变更\",\"price\":\"0.00\"},{\"id\":\"111\",\"name\":\"字号变更\",\"price\":\"100.00\"},{\"id\":\"112\",\"name\":\"行业名称变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (123, 10, '地址变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要地址变更\",\"price\":\"0.00\"},{\"id\":\"113\",\"name\":\"本区地址变更\",\"price\":\"100.00\"},{\"id\":\"114\",\"name\":\"跨区地址变更\",\"price\":\"100.00\"},{\"id\":\"115\",\"name\":\"跨市地址变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (124, 10, '法人及股东变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要变更\",\"price\":\"0.00\"},{\"id\":\"10\",\"name\":\"法人变更\",\"price\":\"100.00\"},{\"id\":\"11\",\"name\":\"股东变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (125, 10, '董监高管理人员信息变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要变更\",\"price\":\"0.00\"},{\"id\":\"13\",\"name\":\"董监高管理人员信息变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (126, 11, '名称变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要名称变更\",\"price\":\"0.00\"},{\"id\":\"111\",\"name\":\"字号变更\",\"price\":\"100.00\"},{\"id\":\"112\",\"name\":\"行业名称变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (127, 11, '地址变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要地址变更\",\"price\":\"0.00\"},{\"id\":\"113\",\"name\":\"本区地址变更\",\"price\":\"100.00\"},{\"id\":\"114\",\"name\":\"跨区地址变更\",\"price\":\"100.00\"},{\"id\":\"115\",\"name\":\"跨市地址变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (128, 11, '法人及股东变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要变更\",\"price\":\"0.00\"},{\"id\":\"10\",\"name\":\"法人变更\",\"price\":\"100.00\"},{\"id\":\"11\",\"name\":\"股东变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (129, 11, '董监高管理人员信息变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要变更\",\"price\":\"0.00\"},{\"id\":\"13\",\"name\":\"董监高管理人员信息变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (131, 12, '名称变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要名称变更\",\"price\":\"0.00\"},{\"id\":\"111\",\"name\":\"字号变更\",\"price\":\"100.00\"},{\"id\":\"112\",\"name\":\"行业名称变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (132, 12, '地址变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要地址变更\",\"price\":\"0.00\"},{\"id\":\"113\",\"name\":\"本区地址变更\",\"price\":\"100.00\"},{\"id\":\"114\",\"name\":\"跨区地址变更\",\"price\":\"100.00\"},{\"id\":\"115\",\"name\":\"跨市地址变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (133, 12, '法人及股东变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要变更\",\"price\":\"0.00\"},{\"id\":\"10\",\"name\":\"法人变更\",\"price\":\"100.00\"},{\"id\":\"11\",\"name\":\"股东变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (134, 12, '董监高管理人员信息变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要变更\",\"price\":\"0.00\"},{\"id\":\"13\",\"name\":\"董监高管理人员信息变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (135, 13, '名称变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要名称变更\",\"price\":\"0.00\"},{\"id\":\"111\",\"name\":\"字号变更\",\"price\":\"100.00\"},{\"id\":\"112\",\"name\":\"行业名称变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (136, 13, '地址变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要地址变更\",\"price\":\"0.00\"},{\"id\":\"113\",\"name\":\"本区地址变更\",\"price\":\"100.00\"},{\"id\":\"114\",\"name\":\"跨区地址变更\",\"price\":\"100.00\"},{\"id\":\"115\",\"name\":\"跨市地址变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (137, 13, '法人及股东变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要变更\",\"price\":\"0.00\"},{\"id\":\"10\",\"name\":\"法人变更\",\"price\":\"100.00\"},{\"id\":\"11\",\"name\":\"股东变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (138, 13, '董监高管理人员信息变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要变更\",\"price\":\"0.00\"},{\"id\":\"13\",\"name\":\"董监高管理人员信息变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (139, 111, '名称变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要名称变更\",\"price\":\"0.00\"},{\"id\":\"111\",\"name\":\"字号变更\",\"price\":\"100.00\"},{\"id\":\"112\",\"name\":\"行业名称变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (140, 111, '地址变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要地址变更\",\"price\":\"0.00\"},{\"id\":\"113\",\"name\":\"本区地址变更\",\"price\":\"100.00\"},{\"id\":\"114\",\"name\":\"跨区地址变更\",\"price\":\"100.00\"},{\"id\":\"115\",\"name\":\"跨市地址变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (141, 111, '法人及股东变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要变更\",\"price\":\"0.00\"},{\"id\":\"10\",\"name\":\"法人变更\",\"price\":\"100.00\"},{\"id\":\"11\",\"name\":\"股东变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (142, 111, '董监高管理人员信息变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要变更\",\"price\":\"0.00\"},{\"id\":\"13\",\"name\":\"董监高管理人员信息变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (143, 112, '名称变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要名称变更\",\"price\":\"0.00\"},{\"id\":\"111\",\"name\":\"字号变更\",\"price\":\"100.00\"},{\"id\":\"112\",\"name\":\"行业名称变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (144, 112, '地址变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要地址变更\",\"price\":\"0.00\"},{\"id\":\"113\",\"name\":\"本区地址变更\",\"price\":\"100.00\"},{\"id\":\"114\",\"name\":\"跨区地址变更\",\"price\":\"100.00\"},{\"id\":\"115\",\"name\":\"跨市地址变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (145, 112, '法人及股东变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要变更\",\"price\":\"0.00\"},{\"id\":\"10\",\"name\":\"法人变更\",\"price\":\"100.00\"},{\"id\":\"11\",\"name\":\"股东变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (146, 112, '董监高管理人员信息变更', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要变更\",\"price\":\"0.00\"},{\"id\":\"13\",\"name\":\"董监高管理人员信息变更\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (147, 107, '融资方案设计', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要\",\"price\":\"0.00\"},{\"id\":\"108\",\"name\":\"请为我提供融资方案设计\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (148, 107, '股权架构设计', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要\",\"price\":\"0.00\"},{\"id\":\"109\",\"name\":\"请为我提供股权架构设计\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (149, 107, '员工股权激励方案设计', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要\",\"price\":\"0.00\"},{\"id\":\"110\",\"name\":\"请为我提供员工股权激励方案设计\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (150, 108, '股权架构设计', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要\",\"price\":\"0.00\"},{\"id\":\"109\",\"name\":\"请为我提供股权架构设计\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (151, 108, '员工股权激励方案设计', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要\",\"price\":\"0.00\"},{\"id\":\"110\",\"name\":\"请为我提供员工股权激励方案设计\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (152, 109, '员工股权激励方案设计', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"不需要\",\"price\":\"0.00\"},{\"id\":\"110\",\"name\":\"请为我提供股员工股权激励方案设计\",\"price\":\"100.00\"}]');
+INSERT INTO `goods_ex` VALUES (153, 207, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (154, 207, '预约银行开户', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理银行开户\",\"price\":\"0.00\"},{\"id\":\"20\",\"name\":\"请为我预约银行开户\"},{\"id\":\"19\",\"name\":\"请为我办理银行开户\"}]');
+INSERT INTO `goods_ex` VALUES (157, 208, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (158, 208, '预约银行开户', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理银行开户\",\"price\":\"0.00\"},{\"id\":\"20\",\"name\":\"请为我预约银行开户\"},{\"id\":\"19\",\"name\":\"请为我办理银行开户\"}]');
+INSERT INTO `goods_ex` VALUES (159, 208, '选择税种核定', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理税种核定\",\"price\":\"0.00\"},{\"id\":\"122\",\"name\":\"请为我办理税种核定(包含官费530元)\"}]');
+INSERT INTO `goods_ex` VALUES (160, 208, '选择社保/公积金', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理\",\"price\":\"0.00\"},{\"id\":\"194\",\"name\":\"请为我办理社保开户\"},{\"id\":\"195\",\"name\":\"请为我办理公积金开户\"},{\"id\":\"196\",\"name\":\"请为我办理社保公积金开户\"}]');
+INSERT INTO `goods_ex` VALUES (161, 205, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (162, 209, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (163, 210, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (164, 205, '预约银行开户', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理银行开户\",\"price\":\"0.00\"},{\"id\":\"20\",\"name\":\"请为我预约银行开户\"},{\"id\":\"19\",\"name\":\"请为我办理银行开户\"}]');
+INSERT INTO `goods_ex` VALUES (165, 209, '预约银行开户', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理银行开户\",\"price\":\"0.00\"},{\"id\":\"20\",\"name\":\"请为我预约银行开户\"},{\"id\":\"19\",\"name\":\"请为我办理银行开户\"}]');
+INSERT INTO `goods_ex` VALUES (166, 210, '预约银行开户', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理银行开户\",\"price\":\"0.00\"},{\"id\":\"20\",\"name\":\"请为我预约银行开户\"},{\"id\":\"19\",\"name\":\"请为我办理银行开户\"}]');
+INSERT INTO `goods_ex` VALUES (167, 205, '选择税种核定', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理税种核定\",\"price\":\"0.00\"},{\"id\":\"122\",\"name\":\"请为我办理税种核定(包含官费530元)\"}]');
+INSERT INTO `goods_ex` VALUES (168, 209, '选择社保/公积金', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理\",\"price\":\"0.00\"},{\"id\":\"194\",\"name\":\"请为我办理社保开户\"},{\"id\":\"195\",\"name\":\"请为我办理公积金开户\"},{\"id\":\"196\",\"name\":\"请为我办理社保公积金开户\"}]');
+INSERT INTO `goods_ex` VALUES (169, 210, '选择社保/公积金', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理\",\"price\":\"0.00\"},{\"id\":\"194\",\"name\":\"请为我办理社保开户\"},{\"id\":\"195\",\"name\":\"请为我办理公积金开户\"},{\"id\":\"196\",\"name\":\"请为我办理社保公积金开户\"}]');
+INSERT INTO `goods_ex` VALUES (170, 205, '选择社保/公积金', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理\",\"price\":\"0.00\"},{\"id\":\"194\",\"name\":\"请为我办理社保开户\"},{\"id\":\"195\",\"name\":\"请为我办理公积金开户\"},{\"id\":\"196\",\"name\":\"请为我办理社保公积金开户\"}]');
+INSERT INTO `goods_ex` VALUES (171, 206, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (172, 211, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (173, 212, '选择注册地址', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"使用自己的地址\",\"price\":\"0.00\"},{\"id\":\"193\",\"name\":\"请为我提供地址注册\"}]');
+INSERT INTO `goods_ex` VALUES (174, 206, '预约银行开户', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理银行开户\",\"price\":\"0.00\"},{\"id\":\"20\",\"name\":\"请为我预约银行开户\"},{\"id\":\"19\",\"name\":\"请为我办理银行开户\"}]');
+INSERT INTO `goods_ex` VALUES (175, 211, '预约银行开户', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理银行开户\",\"price\":\"0.00\"},{\"id\":\"20\",\"name\":\"请为我预约银行开户\"},{\"id\":\"19\",\"name\":\"请为我办理银行开户\"}]');
+INSERT INTO `goods_ex` VALUES (176, 212, '预约银行开户', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理银行开户\",\"price\":\"0.00\"},{\"id\":\"20\",\"name\":\"请为我预约银行开户\"},{\"id\":\"19\",\"name\":\"请为我办理银行开户\"}]');
+INSERT INTO `goods_ex` VALUES (177, 206, '选择人员设备', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己有人员设备\",\"price\":\"0.00\"},{\"id\":\"213\",\"name\":\"请为我提供人员设备\"}]');
+INSERT INTO `goods_ex` VALUES (178, 211, '选择人员设备', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己有人员设备\",\"price\":\"0.00\"},{\"id\":\"213\",\"name\":\"请为我提供人员设备\"}]');
+INSERT INTO `goods_ex` VALUES (179, 212, '选择人员设备', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己有人员设备\",\"price\":\"0.00\"},{\"id\":\"213\",\"name\":\"请为我提供人员设备\"}]');
+INSERT INTO `goods_ex` VALUES (180, 206, '选择税种核定', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理税种核定\",\"price\":\"0.00\"},{\"id\":\"122\",\"name\":\"请为我办理税种核定(包含官费530元)\"}]');
+INSERT INTO `goods_ex` VALUES (181, 207, '选择税种核定', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理税种核定\",\"price\":\"0.00\"},{\"id\":\"122\",\"name\":\"请为我办理税种核定(包含官费530元)\"}]');
+INSERT INTO `goods_ex` VALUES (182, 207, '选择社保/公积金', NULL, '[{\"id\":\"\",\"default\":\"1\",\"name\":\"我自己办理\",\"price\":\"0.00\"},{\"id\":\"194\",\"name\":\"请为我办理社保开户\"},{\"id\":\"195\",\"name\":\"请为我办理公积金开户\"},{\"id\":\"196\",\"name\":\"请为我办理社保公积金开户\"}]');
+INSERT INTO `goods_ex` VALUES (193, 1, '选择注册地址', NULL, '[{\"name\":\"\\u4f7f\\u7528\\u81ea\\u5df1\\u7684\\u5730\\u5740\",\"id\":\"0\",\"default\":1},{\"name\":\"\\u8bf7\\u4e3a\\u6211\\u63d0\\u4f9b\\u5730\\u5740\\u6ce8\\u518c\",\"id\":\"193\"}]');
+INSERT INTO `goods_ex` VALUES (194, 1, '选择银行开户', NULL, '[{\"name\":\"\\u6211\\u81ea\\u5df1\\u529e\\u7406\\u94f6\\u884c\\u5f00\\u6237\",\"id\":\"0\",\"default\":1},{\"name\":\"\\u8bf7\\u4e3a\\u6211\\u9884\\u7ea6\\u94f6\\u884c\\u5f00\\u6237\",\"id\":\"20\"},{\"name\":\"\\u8bf7\\u4e3a\\u6211\\u529e\\u7406\\u94f6\\u884c\\u5f00\\u6237\",\"id\":\"19\"}]');
+INSERT INTO `goods_ex` VALUES (195, 1, '选择税种核定', NULL, '[{\"name\":\"\\u6211\\u81ea\\u5df1\\u529e\\u7406\\u7a0e\\u79cd\\u6838\\u5b9a\",\"id\":\"0\",\"default\":1},{\"name\":\"\\u8bf7\\u4e3a\\u6211\\u529e\\u7406\\u7a0e\\u79cd\\u6838\\u5b9a(\\u5305\\u542b\\u5b98\\u8d39530\\u5143)\",\"id\":\"122\"}]');
+INSERT INTO `goods_ex` VALUES (196, 1, '选择会计服务', NULL, '[{\"name\":\"\\u6211\\u6709\\u81ea\\u5df1\\u7684\\u4f1a\\u8ba1\",\"id\":\"0\",\"default\":1},{\"name\":\"\\u4e00\\u5e74\\u4ee3\\u7406\\u8bb0\\u8d26\\u670d\\u52a1(\\u5c0f\\u89c4\\u6a21)\",\"id\":\"116\"},{\"name\":\"\\u4e00\\u5e74\\u4ee3\\u7406\\u8bb0\\u8d26\\u670d\\u52a1(\\u4e00\\u822c\\u7eb3\\u7a0e\\u4eba)\",\"id\":\"119\"}]');
+INSERT INTO `goods_ex` VALUES (197, 1, '选择社保/公积金', NULL, '[{\"name\":\"\\u6211\\u81ea\\u5df1\\u529e\\u7406\",\"id\":\"0\",\"default\":1},{\"name\":\"\\u8bf7\\u4e3a\\u6211\\u529e\\u7406\\u793e\\u4fdd\\u5f00\\u6237\",\"id\":\"194\"},{\"name\":\"\\u8bf7\\u4e3a\\u6211\\u529e\\u7406\\u516c\\u79ef\\u91d1\\u5f00\\u6237\",\"id\":\"195\"},{\"name\":\"\\u8bf7\\u4e3a\\u6211\\u529e\\u7406\\u793e\\u4fdd\\u516c\\u79ef\\u91d1\\u5f00\\u6237\",\"id\":\"196\"}]');
 
 -- ----------------------------
 -- Table structure for goods_picture
@@ -1135,11 +1174,13 @@ CREATE TABLE `goods_progress`  (
   `disabled` tinyint(1) NOT NULL DEFAULT 1 COMMENT '状态 1为可用',
   `updatetime` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of goods_progress
 -- ----------------------------
+INSERT INTO `goods_progress` VALUES (1, '一般进度流程', 1532317258, '一般进度流程', 1, 1533954479);
+INSERT INTO `goods_progress` VALUES (6, '一般流程2', 1533624261, '一般流程2', 1, NULL);
 
 -- ----------------------------
 -- Table structure for keywords
@@ -1676,43 +1717,16 @@ CREATE TABLE `progress`  (
   `updatetime` int(11) NULL DEFAULT NULL COMMENT '更新时间',
   `disabled` tinyint(1) NOT NULL DEFAULT 1 COMMENT '是否可用 1可用',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = MyISAM AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of progress
 -- ----------------------------
-
--- ----------------------------
--- Table structure for seller_category
--- ----------------------------
-DROP TABLE IF EXISTS `seller_category`;
-CREATE TABLE `seller_category`  (
-  `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'id',
-  `userid` int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT '商户id',
-  `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '分类名',
-  `desc` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '分类描述',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 35 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '卖家分类表' ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of seller_category
--- ----------------------------
-
--- ----------------------------
--- Table structure for unit
--- ----------------------------
-DROP TABLE IF EXISTS `unit`;
-CREATE TABLE `unit`  (
-  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '标准名',
-  `company_id` int(11) UNSIGNED NOT NULL COMMENT '用户',
-  `sort` int(11) NOT NULL DEFAULT 0 COMMENT '排序',
-  `enable` tinyint(1) UNSIGNED NOT NULL DEFAULT 1 COMMENT '状态，0无效，1有效，2删除',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 29 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '统计单位表' ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of unit
--- ----------------------------
+INSERT INTO `progress` VALUES (1, 1, '流程1', 1, 1532317258, '我去热翁无群而我却', NULL, 1);
+INSERT INTO `progress` VALUES (2, 1, '流程2', 2, 1532317258, '为我去额我去额', NULL, 1);
+INSERT INTO `progress` VALUES (3, 1, '流程3', 3, 1532317258, '我而我却二我去额', 1533620849, 1);
+INSERT INTO `progress` VALUES (4, 1, '流程4', 4, 1532317258, '为请问去', NULL, 1);
+INSERT INTO `progress` VALUES (11, 6, '111', 3, 1533624272, '一般流程2', 1533624301, 1);
+INSERT INTO `progress` VALUES (12, 6, '2222', 1, 1533624315, '2222', NULL, 1);
 
 SET FOREIGN_KEY_CHECKS = 1;
