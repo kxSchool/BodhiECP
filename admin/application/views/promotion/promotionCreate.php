@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>集团总控管理系统 | 生成促销</title>
+<title>集团中台管理系统 | 生成促销</title>
 <?php $this -> load -> view('common/top'); ?>
 <link rel="stylesheet" href="<?php echo STATIC_PATH; ?>datetimepicker/bootstrap-datetimepicker.min.css" />
 <script src="<?php echo STATIC_PATH; ?>datetimepicker/bootstrap-datetimepicker.min.js"></script>

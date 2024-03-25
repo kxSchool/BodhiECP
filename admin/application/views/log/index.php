@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>集团总控管理系统 | 操作日志</title>
+<title>集团中台管理系统 | 操作日志</title>
 <?php $this -> load -> view('common/top'); ?>
 <script src="<?php echo STATIC_PATH; ?>js/log.js" type="text/javascript"></script>
 <script type="text/javascript">

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>容易办总控管理系统 | 商品管理</title>
+    <title>集团中台管理系统 | 商品管理</title>
     <?php $this -> load -> view('common/top'); ?>
    <style>
     .tables{

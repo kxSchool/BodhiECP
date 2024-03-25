@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>容易办服务商中心系统 | 客户登陆</title>
+<title>服务商系统 | 客户登陆</title>
 <?php $this->load->view('common/top');?>
 <link rel="shortcut icon" href="<?php echo CRM_STATIC_PATH?>/image/favicon.ico" type="image/x-icon">
 <link href="<?php echo CRM_STATIC_PATH;?>/css/public.css" rel="stylesheet">

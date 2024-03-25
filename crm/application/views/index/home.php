@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>集团总控管理系统 | 后台管理</title>
+    <title>服务商系统 | 后台管理</title>
     <?php $this->load->view('common/top');?>
 </head>
 <body class="skin-blue sidebar-mini">

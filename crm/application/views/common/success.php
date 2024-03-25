@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>容易办服务商中心系统 | 友情提示</title>
+<title>服务商系统 | 友情提示</title>
 <?php $this -> load -> view('common/top'); ?>
 <style>
 .example-modal .modal {

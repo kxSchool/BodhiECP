@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>容易办总控管理系统 | 财务报表</title>
+    <title>集团中台管理系统 | 财务报表</title>
     <?php $this -> load -> view('common/top'); ?>
 </head>
 <body class="skin-blue sidebar-mini">

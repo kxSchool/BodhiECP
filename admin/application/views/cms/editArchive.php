@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>容易办总控管理系统 | 发布文章</title>
+    <title>集团中台管理系统 | 发布文章</title>
     <?php $this -> load -> view('common/top'); ?>
     <link rel="stylesheet" href="<?php echo STATIC_PATH;?>plugins/daterangepicker/daterangepicker-bs3.css">
     <link rel="stylesheet" href="<?php echo STATIC_PATH;?>bootstrapSelect/bootstrap-select.min.css">

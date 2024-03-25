@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>容易办总控管理系统 | 编辑栏目</title>
+    <title>集团中台管理系统 | 编辑栏目</title>
     <?php $this -> load -> view('common/top'); ?>
     <style>
         .form-group{

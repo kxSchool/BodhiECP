@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>容易办总控管理系统 | 修改商品</title>
+    <title>集团中台管理系统 | 修改商品</title>
     <?php $this -> load -> view('common/top'); ?>
     <style>
         .server-body{

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>集团总控管理系统 | 管理员信息</title>
+<title>集团中台管理系统 | 管理员信息</title>
 <?php $this -> load -> view('common/top'); ?>
 <link href="<?php echo STATIC_PATH;?>cropper/css/cropper.min.css" rel="stylesheet">
 <link href="<?php echo STATIC_PATH;?>cropper/css/main.css" rel="stylesheet">

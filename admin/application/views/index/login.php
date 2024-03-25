@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>集团总控管理系统 | 后台登陆</title>
+<title>集团中台管理系统 | 后台登陆</title>
 <?php $this->load->view('common/top');?>
 </head>
 <body class="login-page">

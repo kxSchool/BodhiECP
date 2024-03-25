@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>集团总控管理系统 | 证书审核</title>
+<title>集团中台管理系统 | 证书审核</title>
 <?php $this -> load -> view('common/top'); ?>
 	<script>
 		$(function(){

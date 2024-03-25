@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>容易办服务商中心系统 | 角色管理</title>
+    <title>服务商系统 | 角色管理</title>
     <?php $this -> load -> view('common/top'); ?>
 </head>
 <body class="skin-blue sidebar-mini">
