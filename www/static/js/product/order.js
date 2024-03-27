@@ -14,7 +14,7 @@ function evaluatelist(e){
     var orderModel = " ";
      orderModel  += '<table><thead><tr><th width="310">商品</th><th>数量</th><th>实付款</th><th>交易状态</th><th width="167">操作</th></tr></thead>';
 	$.ajax({
-		url: 'https://www.kxschool.com/api/getOrderList?type='+e+'',
+		url: '/api/getOrderList?type='+e+'',
 		type: "POST",
 		//1表示待付款  2表示已付款
 		data: {type: e},
