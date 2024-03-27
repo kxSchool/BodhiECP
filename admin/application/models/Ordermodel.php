@@ -170,20 +170,20 @@ class Ordermodel extends CI_Model
     public function getOrderGoodsInfo($order_id)
     {
         $sql = "SELECT
-goods.goods.id,
-goods.goods.all_name,
-goods.goods.description,
-goods.goods.category1,
-goods.goods.category2,
-goods.goods.category3,
-goods.goods.progress_id,
-tickets.order_goods.goods_count,
-tickets.order_goods.goods_price,
-tickets.order_goods.order_id
+bodhi_goods.goods.id,
+bodhi_goods.goods.all_name,
+bodhi_goods.goods.description,
+bodhi_goods.goods.category1,
+bodhi_goods.goods.category2,
+bodhi_goods.goods.category3,
+bodhi_goods.goods.progress_id,
+bodhi_tickets.order_goods.goods_count,
+bodhi_tickets.order_goods.goods_price,
+bodhi_tickets.order_goods.order_id
 FROM
-tickets.order_goods
-INNER JOIN goods.goods ON tickets.order_goods.goods_sn = goods.goods.id
-WHERE tickets.order_goods.order_id = ".$order_id;
+bodhi_tickets.order_goods
+INNER JOIN bodhi_goods.goods ON bodhi_tickets.order_goods.goods_sn = bodhi_goods.goods.id
+WHERE bodhi_tickets.order_goods.order_id = ".$order_id;
 
         $query = $this->slave->query($sql);
         $result = $query->result_array();

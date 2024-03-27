@@ -154,7 +154,7 @@ class Order extends MY_Controller {
             if($this->orderdb->isUsable($order_id)){
                 //创建订单进度
                 $curl=curl_init();  //初始化curl句柄
-                $url="https://admin.rongyiban.net/api/createOrderProgress?order_id=$order_id&user_id=$user_id";  //要请求的url地址
+                $url="http://admin.bodhitest.com/api/createOrderProgress?order_id=$order_id&user_id=$user_id";  //要请求的url地址
 
                 curl_setopt($curl, CURLOPT_URL,$url);  //设置curl的参数，即要请求的url是$url
                 curl_exec($curl);  //执行操作
