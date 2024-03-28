@@ -1,4 +1,5 @@
 # Bodhi E-Commerce(菩提电商)
+
 - - 基于BodhiE-Commerce开发的三种商业模式创业公司项目演示
 - -  [ **[一站式创业孵化服务平台](http://www.js715.com)** ] http://www.kxschool.com  
 - - -  手机版 http://m.kxschool.com 
@@ -38,4 +39,4 @@
 4.  Log4php
 5.  Ueditor
 
- - [大牛计算机工作室](http://www.js715.com)  jacky588@qq.com
+ - [大牛计算机工作室](http://www.js715.com)  28586585@qq.com
