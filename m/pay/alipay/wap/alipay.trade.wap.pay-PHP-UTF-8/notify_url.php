@@ -49,10 +49,10 @@ if($result) {//验证成功
     //订单金额
     $total_amount = $_POST['total_fee'];
 
-    $servername = "106.15.183.147";
+    $servername = "127.0.0.1";
     $username = "root";
-    $password = "Ryb123456";
-    $dbname = "tickets";
+    $password = "123456";
+    $dbname = "bodhi_tickets";
 
     // 创建连接
     $conn = new mysqli($servername, $username, $password,$dbname);

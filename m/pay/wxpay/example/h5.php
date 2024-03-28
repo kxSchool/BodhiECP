@@ -30,7 +30,7 @@ $input->SetTotal_fee("1");
 $input->SetTime_start(date("YmdHis"));
 $input->SetTime_expire(date("YmdHis", time() + 600));
 $input->SetGoods_tag("test");
-$input->SetNotify_url("https://m.kxschool.com/pay/wxpay/example/notify.php");
+$input->SetNotify_url("http://m.bodhitest.com/pay/wxpay/example/notify.php");
 $input->SetTrade_type("MWEB");
 //$input->SetOpenid($openId);
 $order = WxPayApi::unifiedOrder($input);

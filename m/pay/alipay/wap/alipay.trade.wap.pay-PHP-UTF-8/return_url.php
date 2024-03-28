@@ -33,7 +33,7 @@ if($result) {//验证成功
 
 	//商户订单号
 
-    header("Location: https://m.kxschool.com/order/index");
+    header("Location: https://m.bodhitest.com/order/index");
     exit;
 
 	$out_trade_no = htmlspecialchars($_GET['out_trade_no']);

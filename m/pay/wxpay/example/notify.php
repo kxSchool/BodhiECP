@@ -46,7 +46,7 @@ class PayNotifyCallBack extends WxPayNotify
 			return false;
 		}
 
-        $db = new Mysql('106.15.183.147','root','Ryb123456','utf8','tickets');
+        $db = new Mysql('127.0.0.1','root','123456','utf8','bodhi_tickets');
         $out_trade_no = $data['out_trade_no'];
         $result = $db->update(array('order_status'=>1),'order_info',"order_sn_shop = '$out_trade_no'");
         if(!$result){
