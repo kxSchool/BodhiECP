@@ -121,9 +121,6 @@
                                 <a href="/user/index"><?php echo $_SESSION['user']['username']?></a>
                             </li>
                             <li>
-                                <a href="/order/orderList">我的订单</a>
-                            </li>
-                            <li>
                                 <a href="/user/logout" target="_blank">退出登录</a>
                             </li>
                         <?php endif;?>

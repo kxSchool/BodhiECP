@@ -37,7 +37,7 @@
 
 				<div class="personal-header">
 					<div class="container clearfix logo myTab" style="border: 1px solid #fff;">
-						<div href="/index/index" class="my-logo"><img src="<?php echo IMG?>/common/logo.png"></div>
+						<a href="/index/index" class="my-logo"><img src="<?php echo IMG?>/common/logo.png"></a>
 						<a href="/user/index" class="my-main active">我的主页</a> 
 						<a href="/user/setting" class="account-set">账号设置</a>
 					</div>
