@@ -1,4 +1,4 @@
-# Bodhi E-Commerce(菩提电商)
+# Bodhi E-Commerce(菩提大电商)
 
 - - 基于BodhiE-Commerce开发的三种商业模式创业公司项目演示
 - -  [ **[一站式创业孵化服务平台](http://www.js715.com)** ] http://www.kxschool.com  
