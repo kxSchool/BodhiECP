@@ -8,7 +8,7 @@
 - -  [ **[汽配城-MRO集采供应链平台](http://www.js715.com)** ] http://wchepeilong.kxschool.com
 - -  [ **[办公楼-租赁及物业管理平台](http://www.js715.com)** ] http://wygoffice.kxschool.com
 - -  [ **[心理咨询师-在线诊所](http://www.js715.com)** ] http://wxr.kxschool.com
-- -  [ **[太阳马戏城-在线选座购票系统](http://www.js715.com)** ] http://wpm.kxschool.com
+- -  [ **[演剧院-在线选座购票系统](http://www.js715.com)** ] http://wpm.kxschool.com
 
 ### 软件架构
 项目设为四大子项目文件目录：网站中台(admin)、服务商后台(crm)、PC网站(www)、手机端H5(m)，指定到统一的CONFIG配置文件(bodhi_config.php)，根据性能需要配置文件中可将数据库配置为读写分离模式。以轻量级CodeIgniter开源框架编写，满足了开发人员在编码过程中的MVC模式，和高性能并发的要求。
