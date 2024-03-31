@@ -126,7 +126,7 @@
                         <?php endif;?>
                         <li style="position: relative;">
                             <img class="rel-tel" src="<?php echo IMG?>/common/phone_logo.png">
-                            <a href="http://www.js715.com/2024/03/17/%e4%bc%81%e4%b8%9a%e6%9c%8d%e5%8a%a1%e5%b9%b3%e5%8f%b0/" target="_blank">jacky588@qq.com</a>
+                            <a href="http://www.kxschool.com/2024/03/17/%e4%bc%81%e4%b8%9a%e6%9c%8d%e5%8a%a1%e5%b9%b3%e5%8f%b0/" target="_blank">jacky588@qq.com</a>
                         </li>
                     </ul>
 
@@ -248,7 +248,7 @@
 				var browser = getBrowser();
 				var wwwMobileUrl = 'http://m.kxschool.com';
 				if(browser.isMobile) {
-					window.location.href = wwwMobileUrl;
+					//window.location.href = wwwMobileUrl;
 				}
 			</script>
 			<script type="text/javascript" src="<?php echo JS?>/index/jquery.scrollLoding.js" defer=""></script>
