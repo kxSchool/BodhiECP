@@ -6,9 +6,21 @@
 >-  -  服务商中心 http://crm.kxschool.com 
 >-  -  网站中台 http://admin.kxschool.com
 >-   [ **[汽配城-MRO集采供应链平台](http://www.kxschool.com)** ] http://wchepeilong.kxschool.com
+>-  -  手机版 http://m.kxschool.com 
+>-  -  服务商中心 http://crm.kxschool.com 
+>-  -  网站中台 http://admin.kxschool.com
 >-   [ **[办公楼-租赁及物业管理平台](http://www.kxschool.com)** ] http://wygoffice.kxschool.com
+>-  -  手机版 http://myg.kxschool.com 
+>-  -  服务商中心 http://crmyg.kxschool.com 
+>-  -  网站中台 http://adminyg.kxschool.com
 >-   [ **[心理咨询师-在线诊所](http://www.kxschool.com)** ] http://wxr.kxschool.com
+>-  -  手机版 http://mxr.kxschool.com 
+>-  -  服务商中心 http://crmxr.kxschool.com 
+>-  -  网站中台 http://adminxr.kxschool.com
 >-   [ **[演剧院-在线选座购票系统](http://www.kxschool.com)** ] http://wpm.kxschool.com
+>-  -  手机版 http://mpm.kxschool.com 
+>-  -  服务商中心 http://crmpm.kxschool.com 
+>-  -  网站中台 http://adminpm.kxschool.com
 
 ### 软件架构
 项目设为四大子项目文件目录：网站中台(admin)、服务商后台(crm)、PC网站(www)、手机端H5(m)，指定到统一的CONFIG配置文件(bodhi_config.php)，根据性能需要配置文件中可将数据库配置为读写分离模式。以轻量级CodeIgniter开源框架编写，满足了开发人员在编码过程中的MVC模式，和高性能并发的要求。
