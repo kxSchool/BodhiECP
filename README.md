@@ -18,9 +18,9 @@
 
 ### 安装教程
 
-1.  PHP
-2.  MYSQL
-3.  APACHE/NGINX
+1.  PHP<=5.6
+2.  MYSQL<=5.7
+3.  APACHE<=2.4/NGINX
 
 ### 使用说明
 
