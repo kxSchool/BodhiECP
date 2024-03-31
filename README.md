@@ -10,10 +10,12 @@
 >-  -  网站中台 http://admincpl.kxschool.com
 >-   [ **[办公楼-租赁及物业管理平台](http://www.kxschool.com)** ] http://wyg.kxschool.com
 >-  -  手机版 http://myg.kxschool.com 
->-  -  服务商中心 http://crmyg.kxschool.com 
+>-  -  服务商中心 http://propertyyg.kxschool.com 
+>-  -  入驻公司 http://renteryg.kxschool.com 
+>-  -  微商城 http://mserviceyg.kxschool.com
 >-  -  网站中台 http://adminyg.kxschool.com
 >-   [ **[心理咨询师-在线诊所](http://www.kxschool.com)** ] http://wxr.kxschool.com
->-  -  服务商中心 http://crmxr.kxschool.com 
+>-  -  服务商中心 http://wxr.kxschool.com
 >-  -  网站中台 http://adminxr.kxschool.com
 >-   [ **[演剧院-在线选座购票系统](http://www.kxschool.com)** ] http://wpm.kxschool.com
 >-  -  服务商中心 http://crmpm.kxschool.com 
