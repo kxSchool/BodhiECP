@@ -246,7 +246,7 @@
 			<script>
 				//判断是否为移动端 如果是移动端即进入移动端的页面
 				var browser = getBrowser();
-				var wwwMobileUrl = 'http://m.kxschool.com';
+				var wwwMobileUrl = 'http://m.bodhitest.com';
 				if(browser.isMobile) {
 					//window.location.href = wwwMobileUrl;
 				}
