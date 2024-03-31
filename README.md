@@ -1,6 +1,6 @@
 # Bodhi E-Commerce(菩提大电商)
 
-- - 基于BodhiEC开发的三种商业模式实施项目演示
+- - 基于BodhiEC三种商业模式开发的项目演示
 >-   [ **[一站式创业孵化服务平台](http://wryb.kxschool.com)** ] http://wryb.kxschool.com  
 >-  -  手机版 http://m.kxschool.com 
 >-  -  服务商中心 http://crm.kxschool.com 
