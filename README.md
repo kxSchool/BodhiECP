@@ -5,10 +5,10 @@
 >-  -  手机版 http://m.kxschool.com 
 >-  -  服务商中心 http://crm.kxschool.com 
 >-  -  网站中台 http://admin.kxschool.com
->-   [ **[汽配城-MRO集采供应链平台](http://www.kxschool.com)** ] http://wchepeilong.kxschool.com
->-  -  服务商中心 http://crm.kxschool.com 
->-  -  网站中台 http://admin.kxschool.com
->-   [ **[办公楼-租赁及物业管理平台](http://www.kxschool.com)** ] http://wygoffice.kxschool.com
+>-   [ **[汽配城-MRO集采供应链平台](http://www.kxschool.com)** ] http://wcpl.kxschool.com
+>-  -  服务商中心 http://crmcpl.kxschool.com 
+>-  -  网站中台 http://admincpl.kxschool.com
+>-   [ **[办公楼-租赁及物业管理平台](http://www.kxschool.com)** ] http://wyg.kxschool.com
 >-  -  手机版 http://myg.kxschool.com 
 >-  -  服务商中心 http://crmyg.kxschool.com 
 >-  -  网站中台 http://adminyg.kxschool.com
