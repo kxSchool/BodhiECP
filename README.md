@@ -45,7 +45,7 @@
 
 1.  Bootstrap
 2.  Jquery
-3.  CodeIgniter
+3.  CodeIgniter [[学习资料](https://www.w3cschool.cn/codeIgniter3)]
 4.  Log4php
 5.  Ueditor
 
