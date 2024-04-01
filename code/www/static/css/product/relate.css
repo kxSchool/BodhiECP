@@ -1,0 +1,438 @@
+
+
+.container {
+    /*overflow: hidden;*/
+}
+
+.top-header .container {
+    overflow: visible;
+}
+
+.layout>.container {
+    overflow: visible;
+    min-height: 600px\0;
+}
+
+.confirm {
+    margin-bottom: 25px;
+    width: 853px;
+    background-color: #fff;
+    -moz-box-shadow:0px 2px 5px #b8b8b7; 
+	-webkit-box-shadow:0px 2px 5px #b8b8b7; 
+	 box-shadow:0px 2px 5px #b8b8b7; 
+}
+
+.confirm .item {
+    padding: 40px 0px 20px;
+    border-bottom: 1px solid #dadada;
+    position: relative;
+    margin-left: 25px;
+    margin: 20px;
+}
+
+.confirm .item .item-header {
+    height: 24px;
+    overflow: hidden;
+}
+.confirm .item .item-header img{
+	float: left;
+	margin-top: 2px;
+}
+
+.confirm .item .item-header h2 {
+    float: left;
+    padding: 0 30px 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    line-height: 23px;
+}
+
+.confirm .item .item-header span {
+    font-size: 12px;
+    color: #333333;
+    line-height: 25px;
+}
+
+.confirm .item .item-header .item-price {
+    float: right;
+    font-size: 18px;
+    color: #eb5767;
+}
+
+.confirm .item .item-list {
+    padding: 38px 160px 0 13px;
+}
+
+.confirm .item .item-list li {
+    float: left;
+    margin: 0 20px 20px 0;
+    /*border: 1px solid #e0e0e0;*/
+    position: relative;
+}
+
+.confirm .item .item-list li a {
+    font-size: 12px;
+    color: #565656;
+    display: block;
+    padding: 7px 10px;
+    background-color: #f4f4f4;
+}
+.confirm .item .item-list li.active b{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background: url(../../img/product/icon/Selected.png) no-repeat;
+	width: 22px;
+	height: 20px;
+	display: inline-block;
+}
+ 
+
+.confirm .item .item-list li.active a {
+    background-color: #fff;
+    color: #de443c;
+    border:1px solid #de443c;
+}
+.confirm .item .item-list li span {
+    display: none;
+    position: absolute;
+    top: 47px;
+    left: 50%;
+    margin-left: -90px;
+    width: 180px;
+    padding: 9px 16px;
+    line-height: 20px;
+    background-color: #fff7d8;
+    font-size: 12px;
+    color: #666;
+    z-index: 10;
+}
+
+.confirm .item .item-list li i {
+    display: none;
+    width: 16px;
+    height: 7px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -8px;
+    background: url("../../img/product/iconArrowT.png") 0 0 no-repeat;
+    z-index: 10;
+}
+.goCount{
+	display: inline-block;
+	width: 180px;
+	height: 48px;
+	line-height: 48px;
+	font-size: 16px;
+	text-align: center;
+	background-color: #de443c;
+	color: #fff;
+	border: 0;
+	outline: none;
+	border-radius: 4px;
+	margin: 32px 0px 30px 650px;
+}
+.shopcart {
+    width: 300px;
+    background-color: #fff;
+    -moz-box-shadow:0px 0px 10px #b8b8b7; 
+	-webkit-box-shadow:0px 0px 10px #b8b8b7; 
+	 box-shadow:0px 0px 10px #b8b8b7; 
+}
+.shopcart .account-title {
+    background-color: #f8f8f8;
+    height: 40px;
+}
+.shopcart .account-title h3 {
+    padding: 16px 0 16px 111px;
+    font-size: 14px;
+    color: #818181;
+    text-align: center;
+    float: left;
+}
+.shopcart .account-title .refresh{
+	display: inline-block;
+    float: right;
+    background: url(../../img/product/Refresh.png) no-repeat 4px 16px; 
+    width: 70px;
+    height: 46px;
+    text-align: right;
+    font-size: 12px;
+    color: #b2b2b2;
+    padding-top: 17px;
+    padding-right: 8px;
+}
+
+.shopcart .account-form .relevant{
+    background-color: #fff;
+}
+.shopcart .shopcart-panel {
+	display: block;
+    margin: 16px 20px 46px 20px;
+}
+
+.shopcart .shopcart-panel .avatar img {
+    width: 100%;
+}
+.shopcart .shopcart-panel .shopcart-total {
+    border-bottom: 1px solid #dadada;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0 24px;
+    width: 192px;
+    margin-left: 37px;
+}
+.shopcart .shopcart-panel .shopcart-total p{
+	color: #4c4c4c;
+	line-height: 27px;
+}
+.shopcart .shopcart-panel .shopcart-total em{
+	color: #de443c;
+}
+
+.shopcart .shopcart-panel .shopcart-total span {
+    color: #e96f68;
+}
+
+ 
+
+/*社保计算器*/
+
+.item .item-details {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    cursor: pointer;
+}
+
+.item .cal {
+    width: 500px;
+    border: 1px solid #d6d6d6;
+    background-color: #f1f2f6;
+    padding: 0 18px;
+}
+
+.item .cal h3 {
+    padding: 14px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.item .cal .cal-panel {
+    padding: 18px 0;
+}
+
+.item .cal .cal-panel .cal-label {
+    width: 100px;
+    text-align: right;
+    margin-bottom: 12px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+}
+
+.item .cal .cal-panel .cal-input {
+    width: 350px;
+    margin-bottom: 12px;
+    
+    display: inline-block;
+}
+
+.item .cal .cal-panel .cal-input .cal-select {
+    margin: 0 10px;
+    width: 30%;
+}
+
+.item .cal .cal-panel .cal-input input {
+    margin:0 10px;
+}
+
+.item .cal .cal-panel .cal-radio {
+    padding: 0 10px;
+}
+
+.item .cal .cal-panel .cal-radio label {
+    height: 20px;
+    vertical-align: top;
+}
+
+.item .cal .cal-panel .cal-radio input {
+    
+}
+
+.item .cal .cal-panel .cal-radio .radio-input {
+    display: none;
+    width: 20px;
+}
+
+.item .cal .cal-panel .cal-radio .radio-span {
+    display: none;
+}
+
+.item .cal .cal-panel .cal-radio .radio-p {
+    display: none;
+    text-align: right;
+    color: #999;
+}
+
+.item .cal .cal-panel .cal-text .info-text {
+    padding: 0 3%;
+}
+
+.item .cal .cal-panel .cal-text input {
+    margin:0 10px;
+    width: 30px;
+}
+
+.item .cal .cal-panel .btn {
+    float: left;
+    margin-left: 110px;
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    background-color: #fff;
+    color: #007bc7;
+    border: 1px solid #007bc7;
+    border-radius: 2px;
+}
+
+.confirm .item .item-list .cal-details {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    display: none;
+    margin: 0;
+    width: 394px;
+    height: 433px;
+    background-color: #f1f2f6;
+    border: none;
+}
+
+.confirm .item .item-list .cal-details table,
+.confirm .item .item-list .cal-details table td {
+    border: 1px solid #d6d6d6;
+    border-collapse: collapse;
+    vertical-align: middle;
+    text-align: center;
+    color: #666;
+}
+
+.confirm .item .item-list .cal-details table {
+    width: 100%;
+}
+
+.confirm .item .item-list .cal-details table td {
+    height: 30px;
+}
+
+.confirm .item .item-list .cal-details table .mark {
+    display: inline-block;
+    color: #e85555;
+    margin: 0 5px;
+    min-width: 100px;
+}
+
+.confirm .item .item-list .cal-details table .m-mark {
+    display: inline-block;
+    font-size: 12px;
+    color: #666;
+    margin: 0 5px;
+    min-width: 100px;
+}
+
+.confirm .item .item-list .cal-details table .t-mark {
+    display: inline-block;
+    color: #e85555;
+    margin: 0 5px;
+    font-size: 18px;
+    min-width: 100px;
+}
+
+.confirm .item .item-list .cal-details .cal-total-list {
+    height: 42px;
+}
+
+.confirm .item .item-list .cal-details .cal-total {
+    height: 90px;
+    line-height: 20px;
+}
+
+/*购物清单*/
+.confirm .done {
+    border-bottom: 5px solid #de43c;
+}
+.confirm .need{
+	height: 46px;
+	line-height: 46px;
+	border-bottom: 1px solid #DE443C;
+	width: 100%;
+	padding-left: 25px;
+}
+
+.confirm .item.done .item-header {
+    position: relative;
+}
+
+.confirm .item.done:after {
+    content: ' ';
+    position: absolute;
+    left: 9px;
+    top: 35px;
+    width: 30px;
+    height: 30px;
+    background: url("../../img/payok.png") 0 0 no-repeat;
+    background-size: contain;
+}
+
+.confirm .item.done .item-header {
+    height: auto;
+}
+
+.confirm .item.done .item-header h2 {
+    float: none;
+    border-left: none;
+    color: #00b095;
+    margin-bottom: 20px;
+    padding-left: 53px;
+}
+
+.confirm .item.done .item-header .item-info {
+    padding-left: 10px;
+}
+
+.confirm .item.done .item-header .item-info img {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #e8e8e8;
+    vertical-align: top;
+    margin-right: 14px;
+}
+
+.confirm .item.done .item-header .item-info span {
+    line-height: 25px;
+    font-size: 14px;
+    color: #666;
+    width: 80%;
+}
+
+.confirm .item.done .item-header .item-info span.item-server {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.confirm .item .item-header.item-need {
+    margin: -20px 0 20px 0;
+}
+
+.confirm .item .item-header.item-need h2 {
+    border-color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-left: 0;
+    padding-left: 0;
+    color: #666;
+}

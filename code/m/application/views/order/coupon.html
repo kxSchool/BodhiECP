@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单确认</title>
+    <link rel="stylesheet" href="../../css/coupon.css">
+    <link rel="stylesheet" href="../../css/selectcoupon.css">
+    <link rel="stylesheet" href="../../css/selectprovider.css">
+
+    <!-- <link rel="stylesheet" href="../../css/usecouponcode.css"> -->
+    <!-- <link rel="stylesheet" href="../../css/common/common.css> -->
+    <link rel="stylesheet" href="../../css/common/layer.css">
+    <link rel="stylesheet" href="../../css/common/main.css">
+    <script type="text/javascript" src="../../js/common/reset.js"></script>
+    <script type="text/javascript" src="../../js/common/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/common/layer.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.btn').on('click',function(){
+                $(".layer-mask").removeClass("hidden");
+			    $(".layer").removeClass("hidden");
+            })
+            $('.weui-dialog__btn').on('click',function(){
+                $(".layer-mask").addClass("hidden");
+				$(".layer").addClass("hidden");
+                $('.nav-four').removeClass("hidden");
+                $('.nav-two').addClass("hidden");
+            })
+        });
+        //优惠码输入框 控制按钮颜色
+        function onBlurInput() {
+            if ($('#code-input').val() == "") {
+                $('.btn').DISABLED = true;
+                $('.btn').css('background', '#e5e5e5')
+            } else {
+                $('.btn').DISABLED = false;
+                $('.btn').css('backgroundColor', '#de443c');
+                $('.btn').css( 'color','#fff')
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <span class="home"></span>
+        </a>
+        <a href="#">
+            <span class="title"></span>
+        </a>
+
+        <a href="../user/selfCenter.html">
+            <span class="person"></span>
+        </a>
+
+    </header>
+    <div class="layout nav-one hidden" id="main">
+        <div class="">
+            <form id="form-orders" action="/orders/index/addorders.html" method="post">
+                <input type="hidden" name="quickpayid" value="0">
+                <input type="hidden" name="channelquickpayid" value="0">
+
+                <div class="service">
+                    <h2>已选服务：</h2>
+                    <div class="item">
+                        <div class="i-title clearfix">
+                            <h3>公司注册（有限责任公司注册）</h3>
+                            <div class="addbtn js-num-panel">
+                                <a href="javascript:;" class="down js-num-down" data-type="1">-</a>
+                                <input type="text" name="providersku[26164]" value="1" data-saleprice="499" data-totalprice-td=".js-sku-totalprice-26164"
+                                    class="num js-num-display">
+                                <a href="javascript:;" class="up js-num-up" data-type="2">+</a>
+                            </div>
+                        </div>
+                        <div class="i-info">
+                            <span>地区：上海-金山区</span>
+                            <span>服务者：胡晴</span>
+                            <img src="http://upload-out.oss-cn-beijing.aliyuncs.com/prj_kfw/provider/000/000/749/749.jpg?x-oss-process=style/210-auto">
+                            <span class="fee js-sku-totalprice-26164">￥499</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="coupon">
+                    <!-- 优惠券列表 点击上面的 .c-tip 之后显示 -->
+                    <ul class="list">
+                        <li class="clearfix">
+                            <a href="javascript:;">
+                                <span>平台优惠券</span>
+                                <span class="js-kfw-coupon-btn num"></span>
+                                <span class="right">&gt;</span>
+                            </a>
+                        </li>
+                        <!--商家优惠券功能没做完，先隐藏-->
+                        <li class="clearfix hidden">
+                            <a href="javascript:;">
+                                <span>商家优惠券</span>
+                                <span class="js-provider-coupon-btn num"></span>
+                                <span class="right">&gt;</span>
+                            </a>
+                        </li>
+                        <li class="clearfix">
+                            <a href="javascript:;">
+                                <span>使用优惠码</span>
+                                <span class="num js-coupon-code-price">
+                                </span>
+                                <span class="right">&gt;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+
+        <footer>
+            <span class="total">应付:
+                <em class="js-price-all-total">￥499</em>
+            </span>
+            <a href="javascript:;" class="gosettle js-gosettle">去支付</a>
+        </footer>
+    </div>
+    <!--无优惠券 S-->
+    <div class="layout nav-two" id="noCoupon">
+        <div class="use">
+            <!-- <p class="title">请输入优惠码:</p> -->
+            <input type="text" id="code-input" name="" value="" placeholder="请输入兑换码" onBlur="onBlurInput()">
+            <!-- <div class="error js-code-error">
+            </div> -->
+            <a href="javascript:;" class="btn">兑换</a>
+        </div>
+        <div class="no-img">
+            <img src="../../../images/noCoupon.png">
+            <p>您暂时没有可以使用的优惠券...</p>
+        </div>
+
+    </div>
+    <!--无优惠券 E-->
+    
+    <div class="layout nav-four hidden" id="selectcoupon-proivder">
+      
+        <div class="use">
+            
+            <input type="text" id="code-input" name="" value="" placeholder="请输入兑换码" onBlur="onBlurInput()">
+             
+            <a href="javascript:;" class="btn">兑换</a>
+        </div>
+        <div class="list js-coupon-ul-proivder">
+            <div class="item active">
+                <div class="num">
+                    <p>¥
+                        <em>30</em>
+                    </p>
+                    <p class="num_font">满减券</p>
+                </div>
+                <div class="coupon_data">
+                    <p>注册公司立减红包</p>
+                    <p>有效期至:2017-07-30</p>
+                </div>
+
+                <div class="coupon_address">
+                    <p>无门槛使用券,最高抵扣20元，限上海地区使用</p>
+                </div>
+            </div>
+            <div class="item active">
+                <div class="num">
+                    <p>¥
+                        <em>20</em>
+                    </p>
+                    <p class="num_font">满减券</p>
+                </div>
+                <div class="coupon_data">
+                    <p>注册公司立减红包</p>
+                    <p>有效期至:2017-07-30</p>
+                </div>
+
+                <div class="coupon_address">
+                    <p>无门槛使用券,最高抵扣50元，限上海地区使用</p>
+                </div>
+            </div>
+            <div class="item active">
+                <div class="num">
+                    <p>¥
+                        <em>30</em>
+                    </p>
+                    <p class="num_font">满减券</p>
+                </div>
+                <div class="coupon_data">
+                    <p>注册公司立减红包</p>
+                    <p>有效期至:2017-07-30</p>
+                </div>
+
+                <div class="coupon_address">
+                    <p>无门槛使用券,最高抵扣20元，限上海地区使用</p>
+                </div>
+            </div>
+            <div class="item active">
+                <div class="num">
+                    <p>¥
+                        <em>30</em>
+                    </p>
+                    <p class="num_font">满减券</p>
+                </div>
+                <div class="coupon_data">
+                    <p>注册公司立减红包</p>
+                    <p>有效期至:2017-07-30</p>
+                </div>
+
+                <div class="coupon_address">
+                    <p>无门槛使用券,最高抵扣20元，限上海地区使用</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="layer-mask in " style="z-index: 1032; background-color: rgba(0, 0, 0, 0.4);"></div>
+    <!--签到成功-->
+    <div class="layer mid hidden" style="z-index: 1033; opacity: 1;">
+        <div class="layer-m">
+            <div class="layer-c" style="max-width: 3.35rem; max-height: 5.87rem; min-width: 3.35rem; transform: scale(1);">
+                <div class="weui-dialog dialog_sign">
+                    <div class="weui-dialog__hd">
+                        <div>温馨提示</div>
+                       
+                    </div>
+                    <div class="weui-dialog__bd">请输入正确的兑换码</div>
+                    <div class="weui-dialog__ft">
+                        <a class="weui-dialog__btn weui-dialog__btn_primary">确定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!--优惠券领取成功-->
+    <div class="layer mid" style="z-index: 1033; opacity: 1;">
+        <div class="layer-m">
+            <div class="layer-c" style="max-width: 3.35rem; max-height: 5.87rem; min-width: 3.35rem; transform: scale(1);">
+                <div class="weui-dialog dialog_sign">
+                    <div class="weui-dialog__hd">
+                        <div>已成功添加到卡包</div>
+                       
+                    </div>
+                    <div class="weui-dialog__bd">两张优惠券已到手,赶紧使用吧！</div>
+                    <div class="weui-dialog__ft">
+                        <a class="weui-dialog__btn weui-dialog__btn_primary">点我立即查看</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    
+   
+
+    <!--右侧悬浮工具条  star-->
+    <div class="m-customer">
+        <a href="tel:62129799">
+            <div class="customer-icon-1"></div>
+            <!-- <div class="customer-txt">在线</div> -->
+        </a>
+        <a  href="javascript:;" onclick="openZixun();">
+            <div class="customer-icon-2"></div>
+            <!-- <div class="customer-txt">电话</div> -->
+        </a>
+    </div>
+    <!--右侧悬浮工具条  end-->
+
+</body>
+
+</html>

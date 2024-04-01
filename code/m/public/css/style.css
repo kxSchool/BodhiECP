@@ -1,0 +1,51 @@
+
+ 
+body{
+    background-color: #f7f6fb;
+}
+header{
+    position: fixed;
+}
+.home{
+    width:100%;
+    height: 0.88rem;
+    background-color: #fff;
+    border:1px solid red;
+}
+.logo{
+    width: 0.5rem;
+    height: 0.4rem;
+    position: absolute;
+    left: 0.2rem;
+    top: 0.2rem;
+}
+h1{
+    font-size: 0.16rem;
+    text-align: center;
+    line-height: 0.88rem;
+    text-overflow: ellipsis;
+    margin-left: 8%;
+    width: 84%;
+    overflow-y: hidden;
+     
+}
+.btn-kefu{
+    background: url(../images/self.png) center center no-repeat;
+    display: block;
+    width: 0.72rem;
+    height: 0.8rem;
+    position: absolute;
+    top: 0px;
+    right: 0.2rem;
+    background-size: 0.48rem;
+}
+.self_banner{
+    background: url(../images/PBanner.png) center center no-repeat;
+   height: 5.5rem;
+}
+.self_banner  img{
+    width: 100%;
+     
+    height: auto;
+}
+ 

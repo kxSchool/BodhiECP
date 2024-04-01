@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="x-dns-prefetch-control" content="on">
+		<title>我的优惠券 - 用户中心 - XXXXX</title>
+		<!-- common css -->
+		<link href="../../../../css/common.css" rel="stylesheet" type="text/css">
+		<link href="../../../../css/sort.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="../../../../css/common/base.css" type="text/css" />
+		<link rel="stylesheet" href="../../../../css/product/coupon.css">
+
+		<script type="text/javascript" src="../../../../js/jquery-1.8.3.min.js"></script>
+		<!--付款的js S-->
+
+		<script type="text/javascript">
+			$(function() {
+
+				$('.js-coupon-tab').find('a').on('click', function() {
+
+					var $this = $(this);
+					$this.parent().addClass('active').siblings().removeClass('active');
+					var _id = $this.attr('data-id');
+					$('.js-tab-' + _id).removeClass('hidden').siblings().addClass('hidden');
+				});
+			});
+		</script>
+
+		<body>
+			<div id="nTalk_post_hiddenElement" style="left: -10px; top: -10px; visibility: hidden; display: none; width: 1px; height: 1px;"></div>
+			<!--header start-->
+			<header>
+
+				<div class="top-header">
+					<div class="container" id="loginbar">
+						<ul class="floatleft">
+							<li class="nav-location">
+								<a href="http://www.kuaifawu.com/product/item/info/id/1.html" class="locatin-icon">
+									<!--<i class="arrow floatright"></i>-->
+									上海市 </a>
+								<div class="location-layer">
+									<em></em>
+									<ul>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(3302)">北京</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(3304)">上海</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(283)">广州</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(285)">深圳</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(160)">南京</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(173)">杭州</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(174)">宁波</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(164)">苏州</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(361)">成都</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(3303)">天津</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(202)">厦门</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(3305)">重庆</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(255)">武汉</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(414)">西安</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(81)">衡水</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(105)">沈阳</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" onclick="changeCity(222)">青岛</a>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+							<li class="left_zc">
+								<a href="#">注册</a>
+							</li>
+							<li>
+								<a href="#">用户登录</a>
+							</li>
+							<li>
+								<a href="#" target="_blank">服务者登录</a>
+							</li>
+						</ul>
+						<ul class="floatright nav-menu">
+							<li>
+								<a href="#">我的订单</a>
+							</li>
+							<li>
+								<a href="#">个人中心</a>
+							</li>
+							<li>
+								<a href="#" target="_blank">021-62129799</a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+
+				<div class="main-header">
+					<div class="container clearfix logo" style="border: 1px solid #fff;">
+						<img src="../../../../img/common/logo.png">
+					</div>
+					<div class="container clearfix">
+						<div class="nav-sub floatleft">
+							<a href="#">全部服务分类</a>
+							<link href="./有限公司注册_公司注册_ 注册公司代理 - XXXXX_files/sort.min.css" rel="stylesheet" type="text/css">
+							<div class="floatleft nav-list">
+								<div class="floatleft nav">
+									<ul class="nav-sub-list clearfix">
+										<li class="">
+											<i class="icon-1"></i>
+											<h4>工商服务</h4>
+											<i class="right-arrow"><div></div></i>
+										</li>
+										<li>
+											<i class="icon-2"></i>
+											<h4>财税服务</h4>
+											<i class="right-arrow"><div></div></i>
+										</li>
+										<li>
+											<i class="icon-3"></i>
+											<h4>资质办理</h4>
+											<i class="right-arrow"><div></div></i>
+										</li>
+										<li>
+											<i class="icon-4"></i>
+											<h4>知识产权</h4>
+											<i class="right-arrow"><div></div></i>
+										</li>
+										<li>
+											<i class="icon-5"></i>
+											<h4>科技服务</h4>
+											<i class="right-arrow"><div></div></i>
+										</li>
+										<li>
+											<i class="icon-6"></i>
+											<h4>法律服务</h4>
+											<i class="right-arrow"><div></div></i>
+										</li>
+										<li>
+											<i class="icon-7"></i>
+											<h4>金融服务</h4>
+											<i class="right-arrow"><div></div></i>
+										</li>
+									</ul>
+								</div>
+								<div class="floatLeft nav-content hidden">
+
+									<!-- 我要开公司 -->
+									<!-- 我要开公司2 -->
+									<div class="clearfix hidden">
+										<ul class="clearfix floatleft nav-content-item nav-content-item-2">
+											<li>
+												<a href="#">
+													<h5>公司注册</h5></a>
+												<div class="nav-one">
+													<a class="active" href="#">公司注册</a>
+													<a href="#">注册地址</a>
+													<a href="#">银行开户</a>
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<h5>公司变更</h5></a>
+												<div>
+													<a href="#">股权变更</a>
+													<a href="#">注册地址变更</a>
+													<a href="#">经营范围变更</a>
+													<a href="#">法人、高管或注册资本变更</a>
+													<a href="#">公司名称变更</a>
+													<a href="#">公司章证遗失补办</a>
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<h5>注销及其他</h5></a>
+												<div>
+													<a class="active" href="#">公司注销</a>
+													<a href="#">年报公示</a>
+													<a href="#">五证合一</a>
+													<a href="#">工商解异常</a>
+												</div>
+											</li>
+										</ul>
+
+									</div>
+									<!-- 我要开公司 -->
+									<!-- 我要代理记账 -->
+									<div class="hidden clearfix">
+										<ul class="clearfix floatleft nav-content-item nav-content-item-2">
+											<li>
+												<a href="#">
+													<h5>代理记账</h5></a>
+												<div class="nav-one">
+													<a class="active" href="#">小规模代理记账</a>
+													<a href="#">一般纳税人代理记账</a>
+													<a class="active" href="#">税收筹划</a>
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<h5>税务代办</h5></a>
+												<div>
+													<a href="#">发票代办</a>
+													<a class="active" href="#">税控代办</a>
+													<a href="#">税务解锁</a>
+													<a href="#">所得税汇算清缴</a>
+													<a href="#">办理一般纳税人资质</a>
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<h5>审计评估</h5></a>
+												<div>
+													<a href="#">财务审计</a>
+													<a class="active" href="#">验资报告</a>
+													<a href="#">资产评估</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!-- 我要代理记账 -->
+									<!-- 我要注册商标 -->
+									<div class="hidden clearfix">
+										<ul class="clearfix floatleft nav-content-item li-thin nav-content-item-2">
+											<li>
+												<a href="http://www.kuaifawu.com/product/item/info/id/7.html">
+													<h5>商标注册</h5></a>
+												<div class="nav-one">
+													<a class="active" href="http://www.kuaifawu.com/product/item/info/id/277.html">国内商标注册</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/223.html">国际商标注册</a>
+													<a class="active" href="http://www.ipr.kuaifawu.com/shop.html">购买商标</a>
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<h5>商标周边</h5></a>
+												<div>
+													<a class="active" href="#">商标驳回复审</a>
+													<a href="#">商标变更</a>
+													<a href="#">商标续展</a>
+													<a href="#">商标异议</a>
+													<a href="#">商标无效宣告</a>
+													<a href="#">商标撤三</a>
+													<a href="#">商标行政诉讼</a>
+													<a href="#">商标转让</a>
+													<a href="#">商标设计</a>
+													<a href="#">其他商标周边</a>
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<h5>著作权</h5></a>
+												<div>
+													<a href="#">文字美术著作权</a>
+													<a href="#">视频著作权</a>
+													<a class="active" href="#">软件著作权</a>
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<h5>专利</h5></a>
+												<div>
+													<a href="http://www.kuaifawu.com/product/item/info/id/162.html">发明</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/161.html">实用新型</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/105.html">外观设计</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!-- 我要注册商标 -->
+									<!-- 我要办高新 -->
+									<div class="hidden clearfix">
+										<ul class="clearfix floatleft nav-content-item nav-content-item-2">
+											<li>
+												<a href="http://www.kuaifawu.com/product/item/info/id/171.html">
+													<h5>行政审批</h5></a>
+												<div class="nav-one">
+													<a class="active" href="http://www.kuaifawu.com/product/item/info/id/171.html">互联网类资质</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/203.html">游戏类资质</a>
+													<a class="active" href="http://www.kuaifawu.com/product/item/info/id/179.html">餐饮类资质</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/804.html">广播电视类资质</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/810.html">通讯类资质</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/807.html">人力资源类资质</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/806.html">旅游类资质</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/181.html">环境类型影响登记</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/803.html">道路运输类资质</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/805.html">营业演出类资质</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/175.html">进出口类资质</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/426.html">ISO9001认证</a>
+												</div>
+											</li>
+											<li>
+												<a href="http://www.kuaifawu.com/product/item/info/id/173.html">
+													<h5>高新认证</h5></a>
+												<div>
+													<a class="active" href="http://www.kuaifawu.com/product/item/info/id/816.html">高新企业认证</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/747.html">创新资金</a>
+												</div>
+											</li>
+											<li>
+												<a href="http://www.kuaifawu.com/product/item/info/id/173.html">
+													<h5>管理体系认证</h5></a>
+												<div>
+													<a class="active" href="http://www.kuaifawu.com/product/item/info/id/1125.html">ISO14001环境体系认证</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/1126.html">OHSAS18001职业安全认证</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/1127.html">ISO27001信息管理安全认证</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/1128.html"> ISO22000食品安全管理体系认证</a>
+												</div>
+											</li>
+										</ul>
+
+									</div>
+									<!-- 我要办高新 -->
+									<!-- 我要办社保 -->
+									<div class="hidden clearfix">
+										<ul class="clearfix floatleft nav-content-item nav-content-item-2">
+											<li>
+												<a href="http://www.kuaifawu.com/product/item/info/id/10.html">
+													<h5>企业社保</h5></a>
+												<div class="nav-one">
+													<a href="http://www.kuaifawu.com/product/item/info/id/10.html">企业社保开户</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/262.html">企业社保代缴</a>
+												</div>
+											</li>
+											<li>
+												<a href="http://www.kuaifawu.com/product/item/info/id/148.html">
+													<h5>个人社保</h5></a>
+												<div>
+													<a class="active" href="http://www.kuaifawu.com/product/item/info/id/148.html">个人社保代缴</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/126.html">社保待遇申领</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/129.html">公积金提取</a>
+												</div>
+											</li>
+											<li>
+												<a href="http://www.kuaifawu.com/product/item/info/id/417.html">
+													<h5>工作居住证</h5></a>
+												<div>
+													<a class="active" href="http://www.kuaifawu.com/product/item/info/id/417.html">企业《工作居住证》开户</a>
+													<a href="http://www.kuaifawu.com/product/item/info/id/418.html">员工《工作居住证》代办</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!-- 我要办社保 -->
+									<!-- 我要找律师 -->
+									<div class="hidden clearfix">
+									<ul class="clearfix floatleft nav-content-item li-thin nav-content-item-2">
+										<li>
+											<a href="#">
+												<h5>法律咨询</h5></a>
+											<div class="nav-one">
+												<a class="active" href="#">电话问律师</a>
+												<a href="#">见面问律师</a>
+												<a href="#">法律会员</a>
+											</div>
+										</li>
+										<li>
+											<a href="#">
+												<h5>合同文书</h5></a>
+											<div>
+												<a class="active" href="#">合同代写、审核</a>
+												<a href="#">股权类合同</a>
+												<a href="#">投资类合同</a>
+												<a href="#">劳动类合同</a>
+												<a href="#">律师函</a>
+												<a href="#">公司章程</a>
+											</div>
+										</li>
+										<li>
+											<a href="#">
+												<h5>法律顾问</h5></a>
+											<div>
+												<a href="#">创业法律顾问</a>
+												<a class="active" href="#">融资专项法律顾问</a>
+												<a href="#">劳动人事专项法律顾问</a>
+												<a href="#">创业法律顾问【升级版】</a>
+											</div>
+										</li>
+										<li>
+											<a href="#">
+												<h5>专项服务</h5></a>
+											<div>
+												<a class="active" href="#">股权方案设计</a>
+												<a href="#">尽职调查</a>
+												<a href="#">代理诉讼</a>
+												<a href="#">个人法律服务</a>
+												<a href="#">股权激励方案</a>
+												<a href="#">劳动仲裁</a>
+											</div>
+										</li>
+									</ul>
+								 
+								</div>
+									<!-- 我要找律师 -->
+								</div>
+
+							</div>
+
+							<script>
+								var $nav = $('.nav-list')
+								var $navList = $('.nav-content').children('.clearfix');
+								var $navSubList = $('.nav-sub-list').find('li');
+								var $navContent = $('.nav-content');
+								var navFlag = false;
+
+								$nav.hover(function() {
+									navFlag = true;
+								}, function() {
+									navFlag = false;
+									$navSubList.removeClass('active');
+									$navList.addClass('hidden');
+									$navContent.addClass('hidden');
+								})
+
+								$navSubList.hover(function() {
+									var $this = $(this);
+									var _id = $this.index();
+									$this.addClass('active').siblings().removeClass('active');
+									$($navList[_id]).removeClass('hidden').siblings().addClass('hidden');
+									$navContent.removeClass('hidden')
+								}, function() {
+									var $this = $(this);
+									var _id = $this.index();
+								})
+
+								// 不是主页时，选择分类可收起
+								$('.nav-sub').hover(function() {
+									$nav.removeClass('hidden');
+								}, function() {
+									$nav.addClass('hidden');
+								})
+							</script>
+						</div>
+						<div class="navs floatleft">
+							<a target="_blank" href="#">公司注册</a>
+							<a href="#">知识产权</a>
+							<a href="#">代理记账</a>
+							<a href="#">国家高新</a>
+							<a href="#">税收筹划</a>
+							<a href="#">公司转让</a>
+							<a href="#">申请专利</a>
+							<a href="#">律师服务</a>
+							<a href="#">快合财税</a>
+
+						</div>
+					</div>
+				</div>
+
+			</header>
+			<!--header end-->
+			<!--layout start-->
+			<div class="layout">
+
+				<script>
+					//判断是否为移动端 如果是移动端即进入移动端的页面
+					var browser = getBrowser();
+					var wwwMobileUrl = 'http://m.kuaifawu.com/product/item/info/id/1.html';
+					if(browser.isMobile) {
+						window.location.href = wwwMobileUrl;
+					}
+				</script>
+				<div class="bg-white">
+					<div class="container">
+						<div class="mycenter">
+							<div class="tip_title">
+								<p>
+									首页>个人中心>我的评价
+								</p>
+							</div>
+							<div class="myMenu floatleft">
+								<ul class="person-ul">
+									<li>
+										<a href="#">个人中心</a>
+									</li>
+									<li>
+										<a href="#">个人资料</a>
+									</li>
+									<li>
+										<a href="#">我的优惠券</a>
+									</li>
+									<li>
+										<a href="#">我的评价</a>
+									</li>
+								</ul>
+								<ul class="order-ul">
+									<li>
+										<a href="#">订单中心</a>
+									</li>
+									<li>
+										<a href="#">我的订单</a>
+									</li>
+								</ul>
+								<ul class="service-ul">
+									<li>
+										<a href="#">售后服务</a>
+									</li>
+									<li>
+										<a href="#">关于退款</a>
+									</li>
+									<li>
+										<a href="#">关于发展</a>
+									</li>
+								</ul>
+							</div>
+							<div class="myCont floatright">
+								<div class="person-main-tab js-coupon-tab">
+									<ul>
+										<li class="first-li active">
+											<a href="javascript:;" data-id="0">可使用</a>
+										</li>
+
+										<li>
+											<a href="javascript:;" data-id="1">已失效</a>
+										</li>
+
+									</ul>
+								</div>
+								<!--个人资料 content部分 S-->
+								<div class="method-content ">
+									<!-- 无优惠券 S-->
+									<div class="noCoupon  hidden">
+										<img src="../../../../img/common/noCoupon.png">
+										<p>您暂时还没有优惠券哦！</p>
+									</div>
+									<!-- 无优惠券 E-->
+									<!-- 可使用的优惠券 S-->
+									<div class="useCoupon js-tab-0 ">
+										<ul>
+											<li>
+												<div class="quan">
+													<div class="quan-count">
+														<div class="elem">
+															<em>￥</em>
+															<strong>100</strong>
+														</div>
+													</div>
+													<div class="quan-site">
+														<div class="q-type">
+															通用券
+														</div>
+														<div class="q-date">
+															有效期至2018-08-30
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="quan">
+													<div class="quan-count">
+														<div class="elem">
+															<em>￥</em>
+															<strong>100</strong>
+														</div>
+													</div>
+													<div class="quan-site">
+														<div class="q-type">
+															通用券
+														</div>
+														<div class="q-date">
+															有效期至2018-08-30
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="quan">
+													<div class="quan-count">
+														<div class="elem">
+															<em>￥</em>
+															<strong>100</strong>
+														</div>
+													</div>
+													<div class="quan-site">
+														<div class="q-type">
+															通用券
+														</div>
+														<div class="q-date">
+															有效期至2018-08-30
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="quan">
+													<div class="quan-count">
+														<div class="elem">
+															<em>￥</em>
+															<strong>100</strong>
+														</div>
+													</div>
+													<div class="quan-site">
+														<div class="q-type">
+															通用券
+														</div>
+														<div class="q-date">
+															有效期至2018-08-30
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="quan">
+													<div class="quan-count">
+														<div class="elem">
+															<em>￥</em>
+															<strong>100</strong>
+														</div>
+													</div>
+													<div class="quan-site">
+														<div class="q-type">
+															通用券
+														</div>
+														<div class="q-date">
+															有效期至2018-08-30
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="quan">
+													<div class="quan-count">
+														<div class="elem">
+															<em>￥</em>
+															<strong>100</strong>
+														</div>
+													</div>
+													<div class="quan-site">
+														<div class="q-type">
+															通用券
+														</div>
+														<div class="q-date">
+															有效期至2018-08-30
+														</div>
+													</div>
+												</div>
+											</li>
+
+										</ul>
+									</div>
+									<!-- 可使用的优惠券 E-->
+									<!-- 过期的优惠券 S-->
+									<div class="loseCoupon js-tab-1 hidden">
+										<ul>
+											<li>
+												<div class="quan">
+													<div class="quan-count">
+														<div class="elem">
+															<em>￥</em>
+															<strong>100</strong>
+														</div>
+													</div>
+													<div class="quan-site">
+														<div class="q-type">
+															通用券
+														</div>
+														<div class="q-date">
+															有效期至2018-08-30
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="quan">
+													<div class="quan-count">
+														<div class="elem">
+															<em>￥</em>
+															<strong>100</strong>
+														</div>
+													</div>
+													<div class="quan-site">
+														<div class="q-type">
+															通用券
+														</div>
+														<div class="q-date">
+															有效期至2018-08-30
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="quan">
+													<div class="quan-count">
+														<div class="elem">
+															<em>￥</em>
+															<strong>100</strong>
+														</div>
+													</div>
+													<div class="quan-site">
+														<div class="q-type">
+															通用券
+														</div>
+														<div class="q-date">
+															有效期至2018-08-30
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="quan">
+													<div class="quan-count">
+														<div class="elem">
+															<em>￥</em>
+															<strong>100</strong>
+														</div>
+													</div>
+													<div class="quan-site">
+														<div class="q-type">
+															通用券
+														</div>
+														<div class="q-date">
+															有效期至2018-08-30
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!-- 过期的优惠券 E-->
+
+								</div>
+								<!--个人资料 content部分 E-->
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 分享到微信 S  
+				<div class="know-poper">
+					<span class="close js-close"></span>
+					<h4>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</h4>
+					  二维码是一个页面  
+					<img src="/product/item/getqrcode/id/info.php" alt="" class="wxImg">
+				</div>
+				<div class="mask"></div>
+				<!-- 分享到微信 E  
+
+				<script type="text/javascript">
+					$(function() {
+
+						//关于我们滚动图
+						$("#pikame").PikaChoose({
+							carousel: true,
+							carouselVertical: true,
+							autoPlay: false
+						});
+
+						$('.js-link-wx').click(function() {
+							$('.know-poper').show();
+							$('.mask').show();
+							return false
+						});
+
+						$('.js-close').click(function() {
+							$('.know-poper').hide();
+							$('.mask').hide();
+						})
+
+					})
+				</script>
+
+			</div>
+			<!--layout end-->
+				<!--footer start-->
+				<footer class="bg-white link list">
+					<div class="greyd2d2d2">
+						<a href="#">
+							<div class="container six-list-index">
+								<ul class="clearfix">
+									<li class="first-li">
+										<div class="foot-icon"></div>
+										<div class="foot-icon-title">
+											<p class="ftitle-p">明码标价</p>
+											<p>无隐形收费 </p>
+											<p>打破所有传统行业陋习</p>
+											<p>将所有服务明码标价</p>
+										</div>
+
+									</li>
+									<li class="second-li">
+										<div class="foot-icon teamIcon"></div>
+										<div class="foot-icon-title">
+											<p class="ftitle-p">专业团队</p>
+											<p>一对一创业辅导 </p>
+											<p>免费提供专业咨询</p>
+										</div>
+
+									</li>
+									<li class="third-li">
+										<div class="foot-icon"></div>
+										<div class="foot-icon-title">
+											<p class="ftitle-p">办理进度</p>
+											<p>实时掌控</p>
+											<p>办理进度一清二楚</p>
+											<p>随时随地可靠</p>
+										</div>
+
+									</li>
+									<li class="fourth-li">
+										<div class="foot-icon"></div>
+										<div class="foot-icon-title">
+											<p class="ftitle-p">一站式</p>
+											<p>创业孵化平台 </p>
+											<p>开公司所需的服务</p>
+											<p>这里都有</p>
+										</div>
+
+									</li>
+
+								</ul>
+							</div>
+						</a>
+					</div>
+					<div class="container">
+						<ul class="link-lists clearfix">
+							<li class="n-m-l">
+								<h5>关于XXXXX</h5>
+								<a target="_blank" href="http://www.kuaifawu.com/help/about.html">了解我们</a>
+								<!-- <a target="_blank" href="/brand/index.php">品牌故事</a> -->
+								<a target="_blank" href="http://www.kuaifawu.com/help/joinus.html">加入我们</a>
+								<a target="_blank" href="http://www.kuaifawu.com/help/contact.html">联系我们</a>
+							</li>
+							<li>
+								<h5>常见问题</h5>
+								<a target="_blank" href="http://www.kuaifawu.com/help/faq.html">新手帮助</a>
+								<a target="_blank" href="http://www.kuaifawu.com/help/support.html">支付帮助</a>
+								<a target="_blank" href="http://www.kuaifawu.com/help/kaijufapiao.html">开具发票</a>
+								<a target="_blank" href="http://www.kuaifawu.com/article/item/index.html">知识库</a>
+							</li>
+							<li>
+								<h5>商务合作</h5>
+								<a target="_blank" href="http://www.kuaifawu.com/help/cooperation.html">商务合作</a>
+								<a target="_blank" href="http://cs.kuaifawu.com/">渠道加盟</a>
+								<a target="_blank" href="http://www.kuaifawu.com/moreservice">更多服务</a>
+								<a target="_blank" href="http://www.kuaifawu.com/help/addresscoop.html">地址商合作</a>
+							</li>
+							<li>
+								<h5>服务商入口</h5>
+								<a href="http://f.kuaifawu.com/">服务商登录</a>
+								<a href="http://www.kuaifawu.com/help/joining.html">服务商加盟</a>
+							</li>
+							<li>
+								<div class="floatleft bd"></div>
+								<div class="floatleft link-code">
+									<i></i>
+									<div class="floatleft link-code-text">
+										<span>扫描二维码</span>
+										<span>关注XXXXX微信</span>
+										<span>创业一手掌握</span>
+									</div>
+								</div>
+								<div class="floatleft link-th">
+									<h5>免费服务热线</h5>
+									<span class="tel">021-62129799</span>
+									<span>周一至周日<em>8:00-22:00</em></span>
+									<button type="button" class="link-btn" onclick="openZixun(&#39;&#39;)">售后服务</button>
+								</div>
+							</li>
+						</ul>
+						<div class="footer-inner text-center">
+							<p class="copyright">Copyright@2017-2018上海XXXXX信息科技有限公司</p>
+						</div>
+					</div>
+				</footer>
+				<!--footer end-->
+				<script>
+					var browser = getBrowser();
+					var wwwMobileUrl = 'http://m.kuaifawu.com/product/item/info/id/1.html';
+					if(browser.isMobile) {
+						window.location.href = wwwMobileUrl;
+					}
+				</script>
+		</body>
+
+</html>
