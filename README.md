@@ -31,7 +31,8 @@
 1.  PHP<=5.6
 2.  MYSQL<=5.7
 3.  APACHE<=2.4/NGINX
-
+4.  [视频教程](https://www.bilibili.com/video/BV1iJ4m157Bp) https://www.bilibili.com/video/BV1iJ4m157Bp
+   
 ### 使用说明
 
 1.  基于docker容器的一键安装
