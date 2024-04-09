@@ -12,7 +12,7 @@
 		<meta name="keywords" content="XXXXX,注册公司,公司注册,工商注册,上海公司注册,代理记账,财税代理,代理记账公司,资质办理,经营许可证办理,商标注册,版权申请,软件著作权,专利申请,知识产权,高新企业认定,商品条形码,管理体系认证">
 		<meta name="description" content="XXXXX是一家专注于为创业者及中小微企业提供一站式创业孵化服务的O2O平台，是对传统商务服务业的颠覆，是用互联网思维创建的企业服务生态圈。服务项目包括：工商服务、财税服务、知识产权、认证服务、法律服务、科技服务、金融服务、创业指导、创业扶持、人才推荐等业务，帮助创业者及中小微企业实现从0到1的孵化，并在后续的从1到N的放大进程中提供包括产业对接、资本对接在内的持续帮助。">
 
-		<title>XXXXX一站式创业孵化服务平台服务项目:注册公司,代理记账,财税代理,资质办理,经营许可证办理,商标注册,版权申请,软件著作权,专利申请,知识产权,高新企业认定,商品条形码,管理体系认证</title>
+		<title>XXXXX一站式创业孵化服务平台<?php echo $cacheName; ?></title>
 		<!-- common css -->
 		<link rel="shortcut icon" href="<?php echo IMG?>/common/favicon.ico" type="image/x-icon">
 		<link href="<?php echo CSS?>/common/base.css" rel="stylesheet" type="text/css">

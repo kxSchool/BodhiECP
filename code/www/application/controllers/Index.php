@@ -12,8 +12,15 @@ class Index extends MY_Controller
     public function Index()
     {
 
-//        $this->output->cache(30);
-
+        $this->output->cache(30);
+        
+        $uri = $this->config->item('base_url').
+               $this->config->item('index_page').
+               $this->uri->uri_string();
+         
+        //得出cache文件的文件名
+        $cacheName = md5($uri);
+        $this->data['cacheName'] = $cacheName;
         //首页轮播图
         $this->data['carousel'] = $this->Ad->getListBySid(10);
 
