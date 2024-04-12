@@ -60,13 +60,13 @@ class Article extends MY_Controller
     public function goodsArticle()
     {
         if(IS_AJAX){
-
             $goods_id = $this->input->get('goods_id');
             if(!$goods_id){
                 echo json_encode(array('code'=>1,'msg'=>'参数错误'));exit;
             }
 
             $list = $this->articledb->getGoodsArticle($goods_id);
+            
             if($list){
                 echo json_encode(array('code'=>0,'data'=>$list));exit;
             }
