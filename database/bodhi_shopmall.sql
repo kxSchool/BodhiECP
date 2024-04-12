@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : bodhi
+ Source Server         : 192.168.177.128
  Source Server Type    : MySQL
- Source Server Version : 50733
- Source Host           : 192.168.31.125:3306
+ Source Server Version : 50744
+ Source Host           : 192.168.177.128:3306
  Source Schema         : bodhi_shopmall
 
  Target Server Type    : MySQL
- Target Server Version : 50733
+ Target Server Version : 50744
  File Encoding         : 65001
 
- Date: 25/03/2024 09:47:15
+ Date: 12/04/2024 10:30:57
 */
 
 SET NAMES utf8mb4;
@@ -70,7 +70,7 @@ CREATE TABLE `ad`  (
   `amount` int(11) NULL DEFAULT NULL COMMENT '销售数量',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `spaceid`(`spaceid`, `disabled`, `listorder`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 209 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '广告位内容' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 209 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '广告位内容' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of ad
@@ -166,7 +166,7 @@ CREATE TABLE `ad_space`  (
   `disabled` tinyint(1) UNSIGNED NOT NULL DEFAULT 1 COMMENT '1可用  0禁用',
   PRIMARY KEY (`spaceid`) USING BTREE,
   INDEX `disabled`(`disabled`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 54 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '广告位' ROW_FORMAT = Fixed;
+) ENGINE = MyISAM AUTO_INCREMENT = 54 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '广告位' ROW_FORMAT = FIXED;
 
 -- ----------------------------
 -- Records of ad_space
@@ -211,7 +211,7 @@ CREATE TABLE `admin`  (
 -- ----------------------------
 -- Records of admin
 -- ----------------------------
-INSERT INTO `admin` VALUES (1, 'admin', '96e79218965eb72c92a549dd5a330112', '系统管理员', 1, '15618645670', 'admin@bodhitest.com', '112.2.149.161', 1694150798, '192.168.31.195', 1711302169, 0);
+INSERT INTO `admin` VALUES (1, 'admin', '96e79218965eb72c92a549dd5a330112', '系统管理员', 1, '15618645670', 'admin@bodhitest.com', '112.2.149.161', 1694150798, '192.168.177.1', 1712887663, 0);
 
 -- ----------------------------
 -- Table structure for admin_priv
@@ -230,7 +230,7 @@ CREATE TABLE `admin_priv`  (
   PRIMARY KEY (`privid`) USING BTREE,
   INDEX `listorder`(`listorder`) USING BTREE,
   INDEX `parentid`(`parentid`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 126 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '权限节点表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 126 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '权限节点表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of admin_priv
@@ -281,7 +281,7 @@ CREATE TABLE `admin_role`  (
   `disabled` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否可用（1禁用 0可用 默认为0）',
   PRIMARY KEY (`roleid`) USING BTREE,
   INDEX `disabled`(`disabled`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 12 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '管理员角色表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 12 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '管理员角色表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of admin_role
@@ -298,7 +298,7 @@ CREATE TABLE `admin_role_priv`  (
   `roleid` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT '角色id（对应happy_admin_role表中的roleid）',
   `privid` tinyint(3) NOT NULL DEFAULT 0 COMMENT '权限节点',
   INDEX `roleid`(`roleid`, `privid`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '管理员后台操作权限表' ROW_FORMAT = Fixed;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '管理员后台操作权限表' ROW_FORMAT = FIXED;
 
 -- ----------------------------
 -- Records of admin_role_priv
@@ -408,7 +408,7 @@ CREATE TABLE `bank`  (
   `bank` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `icon` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '银行卡' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '银行卡' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of bank
@@ -434,7 +434,7 @@ CREATE TABLE `bind_info`  (
   `value` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '内容',
   `delete` tinyint(1) NOT NULL COMMENT '0 未删除 1删除',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 17 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '用户手机及邮箱验证表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 17 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '用户手机及邮箱验证表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of bind_info
@@ -469,7 +469,7 @@ CREATE TABLE `bonus_type`  (
   `sign` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'build_action等于0时代表暗号，1时代表以什么开头',
   `num` int(10) NOT NULL COMMENT 'build_action是1的时候代表促销码位数',
   PRIMARY KEY (`type_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '红包类型表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '红包类型表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of bonus_type
@@ -499,7 +499,7 @@ CREATE TABLE `comment`  (
   `goods_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '商品名称',
   PRIMARY KEY (`comment_id`) USING BTREE,
   INDEX `id_value`(`order_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1956 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '订单评论表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 1956 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '订单评论表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of comment
@@ -1785,6 +1785,29 @@ CREATE TABLE `frozen_account`  (
 INSERT INTO `frozen_account` VALUES (1, 241, 980.00, 1711169927, 766, '202403235562481015');
 
 -- ----------------------------
+-- Table structure for goods_news
+-- ----------------------------
+DROP TABLE IF EXISTS `goods_news`;
+CREATE TABLE `goods_news`  (
+  `goods_id` int(11) NOT NULL,
+  `news_id` int(11) NOT NULL
+) ENGINE = MyISAM CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Fixed;
+
+-- ----------------------------
+-- Records of goods_news
+-- ----------------------------
+INSERT INTO `goods_news` VALUES (1, 114);
+INSERT INTO `goods_news` VALUES (10, 114);
+INSERT INTO `goods_news` VALUES (1, 113);
+INSERT INTO `goods_news` VALUES (1, 115);
+INSERT INTO `goods_news` VALUES (2, 115);
+INSERT INTO `goods_news` VALUES (3, 115);
+INSERT INTO `goods_news` VALUES (4, 115);
+INSERT INTO `goods_news` VALUES (5, 115);
+INSERT INTO `goods_news` VALUES (6, 115);
+INSERT INTO `goods_news` VALUES (7, 115);
+
+-- ----------------------------
 -- Table structure for members1
 -- ----------------------------
 DROP TABLE IF EXISTS `members1`;
@@ -1843,7 +1866,7 @@ CREATE TABLE `members1`  (
 -- ----------------------------
 -- Records of members1
 -- ----------------------------
-INSERT INTO `members1` VALUES (12, '153****5719', 'd2a933660afaad4092e97d6a0f684ff6', 'ncLmgT', 0, 0, '张三', '', 0, '', '', '', '', '', 0, '15371715719', 1, 1529748064, '101.87.3.36', 1711160489, '192.168.31.195', 0, 0, '', '', '', '', '', 0, 0.00, '', '', '', 0, '2017-10-23 13:46:53', 2, 0, '7184f11f-34ca-4be5-a4c7-f68f33fff997', 0, '', '', '', '', NULL, NULL, NULL, NULL, 0);
+INSERT INTO `members1` VALUES (12, '153****5719', 'd2a933660afaad4092e97d6a0f684ff6', 'ncLmgT', 0, 0, '张三', '', 0, '', '', '', '', '', 0, '15371715719', 1, 1529748064, '101.87.3.36', 1712820600, '192.168.177.1', 0, 0, '', '', '', '', '', 0, 0.00, '', '', '', 0, '2017-10-23 13:46:53', 2, 0, 'b91342de-c8b1-40f4-b359-6eaab91f4005', 0, '', '', '', '', NULL, NULL, NULL, NULL, 0);
 INSERT INTO `members1` VALUES (241, '18621153185', '65313bd486ffc8eb4d9aecaebeee4e19', 'jcYQxz', 0, 0, '上海章大牛企业管理有限公司', '28586585@qq.com', 0, '', '', '', '', '', 0, '18621153185', 2, 1530271458, '101.87.3.36', 1710895800, '112.2.149.76', 0, 0, '', '', '', '', '', 0, 76970.05, '', '', '', 100, '2017-10-23 13:46:53', 2, 0, '', 0, '唧唧', 'vh556', '', '', NULL, 10, 109, 1215, 0);
 
 -- ----------------------------
@@ -1878,7 +1901,7 @@ CREATE TABLE `news`  (
   INDEX `status`(`status`, `listorder`, `id`) USING BTREE,
   INDEX `listorder`(`catid`, `status`, `listorder`, `id`) USING BTREE,
   INDEX `catid`(`catid`, `status`, `id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 116 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = 'CMS文章表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 116 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = 'CMS文章表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of news
@@ -1915,7 +1938,7 @@ CREATE TABLE `news_category`  (
   PRIMARY KEY (`catid`) USING BTREE,
   INDEX `module`(`parentid`, `listorder`, `catid`) USING BTREE,
   INDEX `siteid`(`type`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 44 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '栏目表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 44 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '栏目表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of news_category
@@ -1948,7 +1971,7 @@ CREATE TABLE `region`  (
   INDEX `parent_id`(`parent_id`) USING BTREE,
   INDEX `region_type`(`region_type`) USING BTREE,
   INDEX `agency_id`(`agency_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 4049 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '邮政地址管理表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 4049 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '邮政地址管理表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of region
@@ -1991,7 +2014,7 @@ CREATE TABLE `seller_certificate`  (
   `type` tinyint(1) NOT NULL COMMENT '0 证书 1最高学历',
   `refuse_desc` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '拒绝通过的理由',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 27 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '商铺审核证书表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 27 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '商铺审核证书表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of seller_certificate
@@ -2008,7 +2031,7 @@ CREATE TABLE `seller_image`  (
   `filename` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '上传文件名',
   `time` int(11) NOT NULL COMMENT '文件生成时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 53 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '商铺图册表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 53 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '商铺图册表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of seller_image
@@ -2051,7 +2074,7 @@ CREATE TABLE `seller_profile`  (
   `reg_step` tinyint(1) NOT NULL DEFAULT 0,
   `shop_type` tinyint(1) NOT NULL DEFAULT 0 COMMENT '0:商家；1:自营',
   PRIMARY KEY (`userid`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商铺信息扩展表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商铺信息扩展表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of seller_profile
@@ -2090,7 +2113,7 @@ CREATE TABLE `star`  (
   `high` smallint(3) NOT NULL DEFAULT 0 COMMENT '高经验值',
   `price` float(8, 2) NOT NULL DEFAULT 0.00 COMMENT '星级报价',
   PRIMARY KEY (`starid`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商铺星级表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商铺星级表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of star
@@ -2113,7 +2136,7 @@ CREATE TABLE `tag`  (
   `ishot` tinyint(1) NOT NULL DEFAULT 0 COMMENT '是否是热门标签',
   `listorder` tinyint(5) NOT NULL DEFAULT 0,
   PRIMARY KEY (`tagid`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '标签表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '标签表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of tag
@@ -2136,7 +2159,7 @@ CREATE TABLE `tag_category`  (
   `listorder` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT '排序',
   PRIMARY KEY (`catid`) USING BTREE,
   INDEX `sort_order`(`listorder`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '标签分类表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '标签分类表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of tag_category
@@ -2158,7 +2181,7 @@ CREATE TABLE `user_bank`  (
   `is_used` tinyint(1) NOT NULL DEFAULT 1 COMMENT '是否可用 0 不可用 1可用',
   `bankid` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '0' COMMENT 'type=1时 存放银行id',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 15 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '会员银行卡设置表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 15 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci COMMENT = '会员银行卡设置表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of user_bank
@@ -2189,7 +2212,7 @@ CREATE TABLE `user_bonus`  (
   `emailed` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT '猜的，应该是是否已经将红包发送到用户的邮箱；1，是；0，否；',
   PRIMARY KEY (`bonus_id`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 10056 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '已经发送的红包信息列表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 10056 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '已经发送的红包信息列表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of user_bonus
