@@ -138,7 +138,7 @@
         <div class="clearfix"></div>
     </div><!-- /.content-wrapper -->
     <?php $this->load->view('common/footer');?>
-    <script src="<?php echo CRM_STATIC_PATH;?>plugins/chartjs/Chart.min.js" type="text/javascript"></script>
+    <script src="/static/plugins/chartjs/Chart.min.js" type="text/javascript"></script>
     <script>
         $(function () {
 

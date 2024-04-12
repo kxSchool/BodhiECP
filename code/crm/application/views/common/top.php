@@ -1,14 +1,14 @@
 <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-<link href="<?php echo CRM_STATIC_PATH; ?>bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <!-- Font Awesome Icons -->
-<link href="<?php echo CRM_STATIC_PATH; ?>dist/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<link href="/static/dist/css/font-awesome.css" rel="stylesheet" type="text/css" />
 <!-- Theme style -->
-<link href="<?php echo CRM_STATIC_PATH; ?>dist/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+<link href="/static/dist/css/AdminLTE.css" rel="stylesheet" type="text/css" />
 <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
-<link href="<?php echo CRM_STATIC_PATH; ?>dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
-<script src="<?php echo CRM_STATIC_PATH; ?>jQuery/jQuery-2.1.4.min.js"></script>
-<script src="<?php echo CRM_STATIC_PATH;?>dist/js/app.js" type="text/javascript"></script>
-<script src="<?php echo CRM_STATIC_PATH;?>dist/js/jquery.nicescroll.js" type="text/javascript"></script>
+<link href="/static/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+<script src="/static/jQuery/jQuery-2.1.4.min.js"></script>
+<script src="/static/dist/js/app.js" type="text/javascript"></script>
+<script src="/static/dist/js/jquery.nicescroll.js" type="text/javascript"></script>
 <script>
 	$(document).ready( function() {
 		$("html").niceScroll({
@@ -26,21 +26,21 @@
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
-<script src="<?php echo CRM_STATIC_PATH;?>dist/js/html5shiv.min.js"></script>
-<script src="<?php echo CRM_STATIC_PATH;?>dist/js/respond.min.js"></script>
+<script src="/static/dist/js/html5shiv.min.js"></script>
+<script src="/static/dist/js/respond.min.js"></script>
 <![endif]-->
 <!-- Bootstrap 3.3.2 JS -->
-<script src="<?php echo CRM_STATIC_PATH; ?>bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/static/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <!-- iCheck -->
-<script src="<?php echo CRM_STATIC_PATH; ?>iCheck/icheck.min.js" type="text/javascript"></script>
-<link href="<?php echo CRM_STATIC_PATH; ?>iCheck/skins/all.css" rel="stylesheet" type="text/css" />
+<script src="/static/iCheck/icheck.min.js" type="text/javascript"></script>
+<link href="/static/iCheck/skins/all.css" rel="stylesheet" type="text/css" />
 <!--验证-->
-<script src="<?php echo CRM_STATIC_PATH; ?>bootstrapvalidator/bootstrapValidator.min.js"></script>
+<script src="/static/bootstrapvalidator/bootstrapValidator.min.js"></script>
 <!--信息提示框-->
-<script src="<?php echo CRM_STATIC_PATH; ?>layer/layer.js"></script>
+<script src="/static/layer/layer.js"></script>
 <!--开关-->
-<link href="<?php echo CRM_STATIC_PATH; ?>bootstrapSwitch/css/bootstrap-switch.min.css" rel="stylesheet">
-<script src="<?php echo CRM_STATIC_PATH; ?>bootstrapSwitch/js/bootstrap-switch.min.js"></script>
+<link href="/static/bootstrapSwitch/css/bootstrap-switch.min.css" rel="stylesheet">
+<script src="/static/bootstrapSwitch/js/bootstrap-switch.min.js"></script>
 <script>
 $(function() {
 	//左侧导航样式

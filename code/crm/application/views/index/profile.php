@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <title>服务商系统 | 管理员信息</title>
 <?php $this -> load -> view('common/top'); ?>
-<link href="<?php echo CRM_STATIC_PATH;?>cropper/css/cropper.min.css" rel="stylesheet">
-<link href="<?php echo CRM_STATIC_PATH;?>cropper/css/main.css" rel="stylesheet">
-<script src="<?php echo CRM_STATIC_PATH;?>cropper/js/cropper.min.js"></script>
-<script src="<?php echo CRM_STATIC_PATH;?>cropper/js/main.js"></script>
+<link href="/static/cropper/css/cropper.min.css" rel="stylesheet">
+<link href="/static/cropper/css/main.css" rel="stylesheet">
+<script src="/static/cropper/js/cropper.min.js"></script>
+<script src="/static/cropper/js/main.js"></script>
 <script>
 	$(function(){
 		$('input').iCheck({

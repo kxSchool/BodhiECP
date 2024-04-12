@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <title>服务商系统 | 客户登陆</title>
 <?php $this->load->view('common/top');?>
-<link rel="shortcut icon" href="<?php echo CRM_STATIC_PATH?>/image/favicon.ico" type="image/x-icon">
-<link href="<?php echo CRM_STATIC_PATH;?>/css/public.css" rel="stylesheet">
+<link rel="shortcut icon" href="/static/image/favicon.ico" type="image/x-icon">
+<link href="/static/css/public.css" rel="stylesheet">
 </head>
 <body class="login-page">
 <div class="layout container">
 			<div class="Service-login">
 				<form class="login-form" action="" method="post" onsubmit="return checkLoginForm();" autocomplete="off"> 
 					<div class="login-title"> 
-						<img src="<?php echo CRM_STATIC_PATH;?>/image/Serlogo.png" />
+						<img src="/static/image/Serlogo.png" />
 					</div>
 					<div class="login-main">
 						<div class="shop-name form-group has-success" style="display: <?php if(isset($companyId)){echo "none";}  ?>;">
