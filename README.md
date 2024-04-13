@@ -1,19 +1,22 @@
-# bodhiB2B(菩提大电商)
+# BodhiB2B(菩提大电商)
 
-- - 基于bodhiB2B三种商业模式开发的项目演示
- 
->-   [ **[汽配城-MRO集采供应链平台](http://www.kxschool.com)** ] http://wcpl.kxschool.com
+>基于BodhiB2B三种商业模式开发的创业项目演示
+>-   [ **[汽配城-MRO集采供应链平台](http://wcpl.kxschool.com)** ] http://wcpl.kxschool.com
 >-  -  服务商中心 http://shopcpl.kxschool.com
 >-  -  网站中台 http://admincpl.kxschool.com
->-   [ **[办公楼-租赁及物业管理平台](http://www.kxschool.com)** ] http://wyg.kxschool.com
+>-   [ **[一站式创业孵化服务平台](http://wryb.kxschool.com)** ] http://wryb.kxschool.com
+>-  -  手机版 http://m.kxschool.com
+>-  -  服务商中心 http://crm.kxschool.com 
+>-  -  中台系统 http://admin.kxschool.com 
+>-   [ **[办公楼-租赁及物业管理平台](http://wyg.kxschool.com)** ] http://wyg.kxschool.com
 >-  -  手机版 http://myg.kxschool.com/html 
 >-  -  服务商中心 http://propertyyg.kxschool.com 
 >-  -  入驻公司 http://renteryg.kxschool.com 
 >-  -  网站中台 http://adminyg.kxschool.com
->-   [ **[心理咨询师-在线诊所](http://www.kxschool.com)** ] http://wxr.kxschool.com
+>-   [ **[心理咨询师-在线诊所](http://wxr.kxschool.com)** ] http://wxr.kxschool.com
 >-  -  服务商中心 http://wxr.kxschool.com
 >-  -  网站中台 http://adminxr.kxschool.com
->-   [ **[演剧院-在线选座购票系统](http://www.kxschool.com)** ] http://wpm.kxschool.com
+>-   [ **[演剧院-在线选座购票系统](http://wpm.kxschool.com)** ] http://wpm.kxschool.com
 >-  -  服务商中心 http://crmpm.kxschool.com 
 >-  -  网站中台 http://adminpm.kxschool.com
 
@@ -28,8 +31,8 @@
 1.  PHP<=5.6
 2.  MYSQL<=5.7
 3.  NGINX/APACHE<=2.4
-4.  [视频教程](https://space.bilibili.com/19566721) https://space.bilibili.com/19566721
-   
+4.  [视频教程](https://space.bilibili.com/19566721)https://space.bilibili.com/19566721
+
 ### 使用说明
 
 1.  基于docker容器的一键安装
