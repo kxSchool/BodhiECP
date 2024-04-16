@@ -1,5 +1,8 @@
 docker network create -d bridge php-net
-docker run -d -p 3306:3306 --privileged=true  -e MYSQL_ROOT_PASSWORD=123456 --name mysql  --network php-net mysql:5.7 docker-entrypoint.sh mysqld
+docker run -d -p 3306:3306 --privileged=true  -e MYSQL_ROOT_PASSWORD=123456 --name mysql --network php-net mysql:5.7 docker-entrypoint.sh mysqld
+
+
+
 docker run -d --name phpfpm --network php-net -v /data:/data php:5-fpm
 	docker exec -it php bash
 	chown -R www-data:www-data BodhiEC
@@ -27,8 +30,11 @@ docker run --name nginx -d --network php-net -p 80:80 -v /data:/data nginx:lates
 	# 安装 ifconfig, ping
 	apt update
 	apt install net-tools iputils-ping
-	
 
+# 第二次安装mysql时，为了保留原有mysql中的数据	
+cd /data
+docker cp a6f5e8fb8ec3:/var/lib/mysql ./mysql
+docker run -d -p 3306:3306 --privileged=true  -e MYSQL_ROOT_PASSWORD=123456 --name mysql -v /data/mysql:/var/lib/mysql --network php-net mysql:5.7 docker-entrypoint.sh mysqld
 
 
 docker exec -it 89c8174d2db0 /bin/bash
@@ -55,4 +61,6 @@ server {
     }
 
 }
+
+
 
