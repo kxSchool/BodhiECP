@@ -19,7 +19,7 @@
 >-   [ **[演剧院-在线选座购票系统](http://wpm.kxschool.com)** ] http://wpm.kxschool.com
 >-  -  服务商中心 http://crmpm.kxschool.com 
 >-  -  网站中台 http://adminpm.kxschool.com
->-   [ **[ 心理咨询师-考试APP]** ]         
+>-   [ **[ 心理咨询师-模拟国考沪考APP]** ]         
 >-  - 网站中台 http://adminxr.kxschool.com
 >-   [ **[ 心理咨询蓝牙血糖仪游戏APP]** ]         
 >-  - 网站中台 http://adminxr.kxschool.com
