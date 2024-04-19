@@ -19,6 +19,12 @@
 >-   [ **[演剧院-在线选座购票系统](http://wpm.kxschool.com)** ] http://wpm.kxschool.com
 >-  -  服务商中心 http://crmpm.kxschool.com 
 >-  -  网站中台 http://adminpm.kxschool.com
+>-   [ **[ 心理咨询师-考试APP]** ]         
+>-  - 网站中台 http://adminxr.kxschool.com
+>-   [ **[ 心理咨询蓝牙血糖仪游戏APP]** ]         
+>-  - 网站中台 http://adminxr.kxschool.com
+
+
 
 ### 软件架构
 项目设为四大子项目文件目录：网站中台(admin)、服务商后台(crm)、PC网站(www)、手机端H5(m)，指定到统一的CONFIG配置文件(bodhi_config.php)，根据性能需要配置文件中可将数据库配置为读写分离模式。以轻量级CodeIgniter开源框架编写，满足了开发人员在编码过程中的MVC模式，和高性能并发的要求。
