@@ -1,7 +1,7 @@
 # BodhiB2B(菩提大电商)
 
 >基于BodhiB2B三种商业模式开发的创业项目演示
->-   [ **[汽配城-MRO集采供应链平台](http://wcpl.kxschool.com)** ] http://wcpl.kxschool.com
+>-   [ **[五金汽配城-MRO集采供应链平台](http://wcpl.kxschool.com)** ] http://wcpl.kxschool.com
 >-  -  服务商中心 http://shopcpl.kxschool.com
 >-  -  网站中台 http://admincpl.kxschool.com
 >-   [ **[一站式创业孵化服务平台](http://wryb.kxschool.com)** ] http://wryb.kxschool.com
