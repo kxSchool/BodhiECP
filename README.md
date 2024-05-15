@@ -16,7 +16,7 @@
 >-   [ **[心理咨询师-在线诊所](http://wxr.kxschool.com)** ] http://wxr.kxschool.com
 >-  -  服务商中心 http://wxr.kxschool.com
 >-  -  网站中台 http://adminxr.kxschool.com
->-   [ **[演剧院-在线选座购票系统](http://wpm.kxschool.com)** ] http://wpm.kxschool.com
+>-   [ **[演剧院-全景选座购票系统](http://wpm.kxschool.com)** ] http://wpm.kxschool.com
 >-  -  服务商中心 http://crmpm.kxschool.com 
 >-  -  网站中台 http://adminpm.kxschool.com
 >-   [ **[ 心理咨询师-模拟国考沪考APP]** ]         
