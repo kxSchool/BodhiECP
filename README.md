@@ -64,4 +64,4 @@
 4.  Log4php
 5.  Ueditor
 
- - [菩提计算机工作室](http://www.kxschool.com)  28586585@qq.com
+ - [开心学派计算机工作室](http://www.kxschool.com)  28586585@qq.com
