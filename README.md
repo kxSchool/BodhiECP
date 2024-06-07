@@ -11,16 +11,19 @@
 > **基于BodhiEC Platform开发的电子商务平台_创业项目演示：** 
 >-   [ **[五金汽配城-MRO集采供应链平台](http://wcpl.kxschool.com)** ] http://wcpl.kxschool.com
 >-  -  服务商中心 http://shopcpl.kxschool.com
->-  -  网站中台 http://admincpl.kxschool.com
+>-  -  中台系统 http://admincpl.kxschool.com
+>-  -  供应商中心 http://crmcpl.kxschool.com
+>-  -  APP接口 http://apicpl.kxschool.com
 >-   [ **[一站式创业孵化服务平台](http://wryb.kxschool.com)** ] http://wryb.kxschool.com
->-  -  手机版 http://m.kxschool.com
->-  -  服务商中心 http://crm.kxschool.com 
->-  -  中台系统 http://admin.kxschool.com 
+>-  -  手机端H5 http://m.kxschool.com
+>-  -  服务商中心 http://crm.kxschool.com
+>-  -  中台系统 http://admin.kxschool.com
 >-   [ **[办公楼-租赁及物业管理平台](http://wyg.kxschool.com)** ] http://wyg.kxschool.com
->-  -  手机版 http://myg.kxschool.com/html 
->-  -  服务商中心 http://propertyyg.kxschool.com 
->-  -  入驻公司 http://renteryg.kxschool.com 
->-  -  网站中台 http://adminyg.kxschool.com
+>-  -  手机版H5 http://myg.kxschool.com/html
+>-  -  入驻企业系统 http://renteryg.kxschool.com
+>-  -  资产与物业系统 http://propertyyg.kxschool.com
+>-  -  办公楼商家系统 http://shopyg.kxschool.com
+>-  -  中台系统 http://adminyg.kxschool.com
 >-   [ **[心理咨询师-在线诊所](http://wxr.kxschool.com)** ] http://wxr.kxschool.com
 >-  -  服务商中心 http://wxr.kxschool.com
 >-  -  网站中台 http://adminxr.kxschool.com
