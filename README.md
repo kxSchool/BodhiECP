@@ -38,9 +38,9 @@
 
 ### 安装教程
 
-1.  PHP<=5.6
-2.  MYSQL<=5.7
-3.  NGINX/APACHE<=2.4
+1.  PHP>=5.6
+2.  MYSQL>=5.7
+3.  NGINX/APACHE>=2.4
 4.  [视频教程](https://space.bilibili.com/19566721)https://space.bilibili.com/19566721
 
 ### 使用说明
