@@ -1,5 +1,5 @@
 # Bodhi eCommerce Platform
-### 电商平台孵化器  [ **[欢迎投资][(http://wcpl.kxschool.com](http://bp.kxschool.com/kxschool-BP.pdf))** ]
+### 电商平台孵化器  [ **[欢迎投资](http://bp.kxschool.com/kxschool-BP.pdf))** ]
 
 > **基于BodhiEC Platform开发的电商平台_创业项目演示：** 
 >-   [ **[五金汽配城-MRO集采供应链平台](http://wcpl.kxschool.com)** ] http://wcpl.kxschool.com
