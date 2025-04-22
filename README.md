@@ -1,4 +1,4 @@
-# Bodhi eCommerce Platform
+# Bodhi Economy Platform
 ### 电商平台孵化器  [ **[欢迎投资](http://bp.kxschool.com/kxschool-BP.pdf)** ]
 
 > **基于BodhiEC Platform开发的电商平台_创业项目演示：** 
